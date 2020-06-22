@@ -6,16 +6,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class ThirdParty {
+public class ThirdParty extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String hashedKey;
-    private String name;
 
-    public ThirdParty(String hashedKey, String name) {
+    public ThirdParty() {
+    }
+
+    public ThirdParty(String name, String hashedKey) {
+        super(name);
         this.hashedKey = hashedKey;
-        this.name = name;
     }
 
     public Integer getId() {
@@ -34,11 +36,8 @@ public class ThirdParty {
         this.hashedKey = hashedKey;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public boolean canAccess(Checking account) {
+        return true;
     }
 }

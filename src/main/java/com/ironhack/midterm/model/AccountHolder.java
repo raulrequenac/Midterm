@@ -1,32 +1,41 @@
 package com.ironhack.midterm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-public class AccountHolder {
+public class AccountHolder extends User {
     @Id
     @GeneratedValue
     private Integer id;
-    private String name;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
+    @ManyToOne
     private Address address;
+    @ManyToOne
     private Address mailingAddress;
+    @OneToMany(mappedBy = "primaryOwner")
+    private List<Checking> primaryAccounts;
+    @OneToMany(mappedBy = "secondaryOwner")
+    private List<Checking> secondaryAccounts;
 
-    public AccountHolder(String name, Date dateOfBirth, Address address, Address mailingAddress) {
-        this.name = name;
+    public AccountHolder() {
+    }
+
+    public AccountHolder(String name) {
+        super(name);
+    }
+
+    public AccountHolder(String name, LocalDate dateOfBirth, Address address, Address mailingAddress) {
+        super(name);
         this.dateOfBirth = dateOfBirth;
         this.address = address;
         this.mailingAddress = mailingAddress;
     }
 
-    public AccountHolder(String name, Date dateOfBirth, Address address) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.address = address;
-        this.mailingAddress = null;
+    public AccountHolder(String name, LocalDate dateOfBirth, Address address) {
+        this(name, dateOfBirth, address, null);
     }
 
     public Integer getId() {
@@ -37,19 +46,11 @@ public class AccountHolder {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -67,5 +68,10 @@ public class AccountHolder {
 
     public void setMailingAddress(Address mailingAddress) {
         this.mailingAddress = mailingAddress;
+    }
+
+    public boolean canAccess(Checking account) {
+        return primaryAccounts.stream().anyMatch(acc -> acc.getId()==account.getId()) ||
+                secondaryAccounts.stream().anyMatch(acc -> acc.getId()==account.getId());
     }
 }

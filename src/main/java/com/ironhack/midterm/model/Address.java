@@ -3,6 +3,8 @@ package com.ironhack.midterm.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Address {
@@ -16,6 +18,13 @@ public class Address {
     private Short portalNumber;
     private Short floor;
     private String door;
+    @OneToMany(mappedBy = "address")
+    private List<AccountHolder> users;
+    @OneToMany(mappedBy = "mailingAddress")
+    private List<AccountHolder> mailingUsers;
+
+    public Address() {
+    }
 
     public Address(String country, String city, Integer postCode, String street, Short portalNumber, Short floor, String door) {
         this.country = country;

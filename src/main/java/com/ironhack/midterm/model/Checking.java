@@ -1,40 +1,54 @@
 package com.ironhack.midterm.model;
 
 import com.ironhack.midterm.enums.AccountStatus;
+import com.ironhack.midterm.exceptions.NotEnoughBalanceException;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Checking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Money balance;
+    @Embedded
+    protected Money balance;
     private Integer secretKey;
+    @ManyToOne
     private AccountHolder primaryOwner;
+    @ManyToOne
     private AccountHolder secondaryOwner;
-    protected Money minimumBalance;
-    private Money penaltyFee;
-    private Money monthlyMaintenanceFee;
+    protected BigDecimal minimumBalance;
+    private BigDecimal penaltyFee;
+    private BigDecimal monthlyMaintenanceFee;
     private AccountStatus status;
 
-    public Checking(Money balance, Integer secretKey, AccountHolder primaryOwner, AccountHolder secondaryOwner, AccountStatus status) {
+    public Checking() {
+    }
+
+    public Checking(Money balance, Integer secretKey, AccountHolder primaryOwner) {
         this.balance = balance;
         this.secretKey = secretKey;
         this.primaryOwner = primaryOwner;
-        this.secondaryOwner = secondaryOwner;
-        this.minimumBalance = new Money(new BigDecimal(250));
-        this.penaltyFee = new Money(new BigDecimal(40));
-        this.monthlyMaintenanceFee = new Money(new BigDecimal(12));
-        this.status = status;
+        this.secondaryOwner = null;
+        this.minimumBalance = new BigDecimal(250);
+        this.penaltyFee = new BigDecimal(40);
+        this.monthlyMaintenanceFee = new BigDecimal(12);
+        this.status = AccountStatus.ACTIVE;
     }
 
-    public Checking(Money balance, Integer secretKey, AccountHolder primaryOwner, AccountStatus status) {
-        this(balance, secretKey, primaryOwner, null, status);
+    public void credit(Money amount) {
+        this.balance.increaseAmount(amount);
+    }
+
+    public void debit(Money amount) {
+        BigDecimal newBalance = this.balance.getAmount().subtract(amount.getAmount());
+        if (this.balance.getAmount().compareTo(amount.getAmount())<0 ||
+                newBalance.subtract(this.penaltyFee).compareTo(BigDecimal.valueOf(0))<0)
+            throw new NotEnoughBalanceException();
+        if (newBalance.compareTo(this.minimumBalance)<0) this.balance.decreaseAmount(this.penaltyFee);
+        this.balance.decreaseAmount(amount);
     }
 
     public Integer getId() {
@@ -77,27 +91,27 @@ public class Checking {
         this.secondaryOwner = secondaryOwner;
     }
 
-    public Money getMinimumBalance() {
+    public BigDecimal getMinimumBalance() {
         return minimumBalance;
     }
 
-    public void setMinimumBalance(Money minimumBalance) {
+    public void setMinimumBalance(BigDecimal minimumBalance) {
         this.minimumBalance = minimumBalance;
     }
 
-    public Money getPenaltyFee() {
+    public BigDecimal getPenaltyFee() {
         return penaltyFee;
     }
 
-    public void setPenaltyFee(Money penaltyFee) {
+    public void setPenaltyFee(BigDecimal penaltyFee) {
         this.penaltyFee = penaltyFee;
     }
 
-    public Money getMonthlyMaintenanceFee() {
+    public BigDecimal getMonthlyMaintenanceFee() {
         return monthlyMaintenanceFee;
     }
 
-    public void setMonthlyMaintenanceFee(Money monthlyMaintenanceFee) {
+    public void setMonthlyMaintenanceFee(BigDecimal monthlyMaintenanceFee) {
         this.monthlyMaintenanceFee = monthlyMaintenanceFee;
     }
 
