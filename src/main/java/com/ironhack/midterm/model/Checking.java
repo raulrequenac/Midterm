@@ -43,11 +43,12 @@ public class Checking {
     }
 
     public void debit(Money amount) {
+        if (this.balance.getAmount().compareTo(amount.getAmount())<0) throw new NotEnoughBalanceException();
+
         BigDecimal newBalance = this.balance.getAmount().subtract(amount.getAmount());
-        if (this.balance.getAmount().compareTo(amount.getAmount())<0 ||
-                newBalance.subtract(this.penaltyFee).compareTo(BigDecimal.valueOf(0))<0)
-            throw new NotEnoughBalanceException();
-        if (newBalance.compareTo(this.minimumBalance)<0) this.balance.decreaseAmount(this.penaltyFee);
+        if (this.balance.getAmount().compareTo(this.minimumBalance)>=0 && newBalance.compareTo(this.minimumBalance)<0)
+            this.balance.decreaseAmount(this.penaltyFee);
+
         this.balance.decreaseAmount(amount);
     }
 

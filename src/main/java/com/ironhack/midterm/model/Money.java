@@ -1,10 +1,8 @@
 package com.ironhack.midterm.model;
 
 import com.ironhack.midterm.interfaces.Transactional;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 import java.math.RoundingMode;
 import java.math.BigDecimal;
 import java.util.Currency;

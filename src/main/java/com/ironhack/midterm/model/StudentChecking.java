@@ -1,6 +1,5 @@
 package com.ironhack.midterm.model;
 
-import com.ironhack.midterm.enums.AccountStatus;
 import com.ironhack.midterm.exceptions.NotEnoughBalanceException;
 
 import javax.persistence.*;
