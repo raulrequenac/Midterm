@@ -1,10 +1,10 @@
-package com.ironhack.datatest;
+package com.ironhack.midterm;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DatatestApplicationTests {
+class MidtermApplicationTests {
 
 	@Test
 	void contextLoads() {
