@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Set;
 
 @Entity
 public class ThirdParty extends User {
@@ -15,17 +16,9 @@ public class ThirdParty extends User {
     public ThirdParty() {
     }
 
-    public ThirdParty(String name, String hashedKey) {
-        super(name);
+    public ThirdParty(String name, String username, String password, String hashedKey) {
+        super(name, username, password);
         this.hashedKey = hashedKey;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getHashedKey() {
@@ -34,10 +27,5 @@ public class ThirdParty extends User {
 
     public void setHashedKey(String hashedKey) {
         this.hashedKey = hashedKey;
-    }
-
-    @Override
-    public boolean canAccess(Checking account) {
-        return true;
     }
 }

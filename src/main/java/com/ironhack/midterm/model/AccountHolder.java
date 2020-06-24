@@ -2,7 +2,9 @@ package com.ironhack.midterm.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class AccountHolder extends User {
@@ -22,27 +24,10 @@ public class AccountHolder extends User {
     public AccountHolder() {
     }
 
-    public AccountHolder(String name) {
-        super(name);
-    }
-
-    public AccountHolder(String name, LocalDate dateOfBirth, Address address, Address mailingAddress) {
-        super(name);
+    public AccountHolder(String name, String username, String password, LocalDate dateOfBirth, Address address) {
+        super(name, username, password);
         this.dateOfBirth = dateOfBirth;
         this.address = address;
-        this.mailingAddress = mailingAddress;
-    }
-
-    public AccountHolder(String name, LocalDate dateOfBirth, Address address) {
-        this(name, dateOfBirth, address, null);
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public LocalDate getDateOfBirth() {
@@ -72,5 +57,21 @@ public class AccountHolder extends User {
     public boolean canAccess(Checking account) {
         return primaryAccounts.stream().anyMatch(acc -> acc.getId()==account.getId()) ||
                 secondaryAccounts.stream().anyMatch(acc -> acc.getId()==account.getId());
+    }
+
+    public List<Checking> getPrimaryAccounts() {
+        return primaryAccounts;
+    }
+
+    public void setPrimaryAccounts(List<Checking> primaryAccounts) {
+        this.primaryAccounts = primaryAccounts;
+    }
+
+    public List<Checking> getSecondaryAccounts() {
+        return secondaryAccounts;
+    }
+
+    public void setSecondaryAccounts(List<Checking> secondaryAccounts) {
+        this.secondaryAccounts = secondaryAccounts;
     }
 }

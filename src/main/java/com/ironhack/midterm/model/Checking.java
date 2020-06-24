@@ -5,6 +5,7 @@ import com.ironhack.midterm.exceptions.NotEnoughBalanceException;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -23,6 +24,8 @@ public class Checking {
     private BigDecimal penaltyFee;
     private BigDecimal monthlyMaintenanceFee;
     private AccountStatus status;
+    @OneToMany(mappedBy = "account")
+    private List<Transaction> transactions;
 
     public Checking() {
     }

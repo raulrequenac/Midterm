@@ -14,7 +14,7 @@ public class CreditCard extends Savings {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Money creditLimit;
+    private BigDecimal creditLimit;
 
     public CreditCard() {
     }
@@ -22,16 +22,16 @@ public class CreditCard extends Savings {
     public CreditCard(Money balance, AccountHolder primaryOwner) {
         super(balance, null, primaryOwner);
         super.setMinimumBalance(new BigDecimal(0));
-        this.creditLimit = new Money(new BigDecimal(100));
+        this.creditLimit = new BigDecimal(100);
     }
 
-    public Money getCreditLimit() {
+    public BigDecimal getCreditLimit() {
         return creditLimit;
     }
 
-    public void setCreditLimit(Money creditLimit) {
-        if (this.creditLimit.getAmount().compareTo(BigDecimal.valueOf(100))<=0 ||
-                this.creditLimit.getAmount().compareTo(BigDecimal.valueOf(100000))>0)
+    public void setCreditLimit(BigDecimal creditLimit) {
+        if (this.creditLimit.compareTo(BigDecimal.valueOf(100))<=0 ||
+                this.creditLimit.compareTo(BigDecimal.valueOf(100000))>0)
             throw new IllegalCreditLimitException();
         this.creditLimit = creditLimit;
     }

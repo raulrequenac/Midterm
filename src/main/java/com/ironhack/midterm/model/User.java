@@ -2,22 +2,39 @@ package com.ironhack.midterm.model;
 
 import com.ironhack.midterm.exceptions.AlreadyLoggedInException;
 
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
-@MappedSuperclass
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
     private boolean loggedIn;
+    private String username;
+    private String password;
+    @OneToMany(fetch= FetchType.EAGER, cascade= CascadeType.ALL, mappedBy="user")
+    private Set<Role> roles = new HashSet<>();
 
     public User() {
     }
 
-    public User(String name) {
+    public User(String name, String username, String password) {
         this.name = name;
         this.loggedIn = false;
+        this.username = username;
+        this.password = password;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -41,5 +58,31 @@ public abstract class User {
         this.loggedIn = false;
     }
 
-    public abstract boolean canAccess(Checking account);
+    public boolean canAccess(Checking account) {
+        return true;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }

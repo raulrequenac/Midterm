@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Set;
 
 @Entity
 public class Admin extends User {
@@ -14,14 +15,7 @@ public class Admin extends User {
     public Admin() {
     }
 
-    public Admin(String name) {
-        super(name);
+    public Admin(String name, String username, String password) {
+        super(name, username, password);
     }
-
-    @Override
-    public boolean canAccess(Checking account) {
-        return true;
-    }
-
-    //createAccount (Checking, Saving or CreditCard)
 }
