@@ -17,10 +17,9 @@ public abstract class User {
     private String username;
     private String password;
     @OneToMany(fetch= FetchType.EAGER, cascade= CascadeType.ALL, mappedBy="user")
-    private Set<Role> roles = new HashSet<>();
+    protected Set<Role> roles = new HashSet<>();
 
-    public User() {
-    }
+    public User() { }
 
     public User(String name, String username, String password) {
         this.name = name;
@@ -58,10 +57,6 @@ public abstract class User {
         this.loggedIn = false;
     }
 
-    public boolean canAccess(Checking account) {
-        return true;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -85,4 +80,6 @@ public abstract class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+    public boolean canAccess(Checking account) { return true; }
 }

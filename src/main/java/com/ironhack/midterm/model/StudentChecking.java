@@ -7,10 +7,6 @@ import java.math.BigDecimal;
 
 @Entity
 public class StudentChecking extends Checking {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     public StudentChecking() {
     }
 

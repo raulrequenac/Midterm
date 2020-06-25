@@ -17,40 +17,10 @@ public class CheckingControllerImpl implements CheckingController {
     @Autowired
     private CheckingService checkingService;
 
-    @GetMapping("/accounts/checkings/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public Checking findById(@AuthenticationPrincipal User user, @PathVariable Integer id) {
-        return checkingService.findById(user, id);
-    }
-
-    @GetMapping("/accounts/checkings/{id}/balance")
-    @ResponseStatus(HttpStatus.OK)
-    public Money findBalance(@AuthenticationPrincipal User user, @PathVariable Integer id) {
-        return checkingService.findBalance(user, id);
-    }
-
-    @PostMapping("/accounts/checkings/{id}/transfer")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void transfer(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Transference transference) {
-        checkingService.transfer(user, id, transference);
-    }
-
     @PostMapping("/accounts/checkings")
     @ResponseStatus(HttpStatus.CREATED)
     public Checking create(@RequestBody AccountInstance accountInstance,
                            @RequestParam(value = "secondaryOwnerId", required = false) Integer secondaryOwnerId) {
         return checkingService.create(accountInstance, secondaryOwnerId);
-    }
-
-    @PostMapping("/accounts/checkings/{id}/credit")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void credit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
-        checkingService.credit(user, id, amount);
-    }
-
-    @PostMapping("/accounts/checkings/{id}/debit")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void debit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
-        checkingService.credit(user, id, amount);
     }
 }

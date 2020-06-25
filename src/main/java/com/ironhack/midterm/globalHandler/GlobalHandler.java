@@ -48,4 +48,14 @@ public class GlobalHandler {
     public void handleNotLoggedInException(NotLoggedInException e, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
     }
+
+    @ExceptionHandler(FraudDetectedException.class)
+    public void handleFraudDetectedException(FraudDetectedException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
+    }
+
+    @ExceptionHandler(FrozenAccountException.class)
+    public void handleFrozenAccountException(FrozenAccountException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
+    }
 }

@@ -11,9 +11,6 @@ import java.time.temporal.ChronoUnit;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Savings extends Checking {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     protected BigDecimal interestRate;
     protected LocalDate interestDate;
 
@@ -50,7 +47,7 @@ public class Savings extends Checking {
         LocalDate today = LocalDate.now();
         for (long years = ChronoUnit.YEARS.between(today, this.interestDate); years>0; years--)
             this.credit(new Money(this.balance.getAmount().multiply(this.interestRate)));
-        this.interestDate = LocalDate.of(today.getYear(), today.getMonth(), this.interestDate.getDayOfMonth());
+        this.interestDate = LocalDate.of(today.getYear(), this.interestDate.getMonth(), this.interestDate.getDayOfMonth());
         return this.balance;
     }
 

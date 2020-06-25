@@ -8,9 +8,6 @@ import java.util.Set;
 
 @Entity
 public class ThirdParty extends User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     private String hashedKey;
 
     public ThirdParty() {

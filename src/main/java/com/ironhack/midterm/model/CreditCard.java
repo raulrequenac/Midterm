@@ -11,9 +11,6 @@ import java.time.temporal.ChronoUnit;
 
 @Entity
 public class CreditCard extends Savings {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     private BigDecimal creditLimit;
 
     public CreditCard() {
@@ -21,7 +18,7 @@ public class CreditCard extends Savings {
 
     public CreditCard(Money balance, AccountHolder primaryOwner) {
         super(balance, null, primaryOwner);
-        super.setMinimumBalance(new BigDecimal(0));
+        setMinimumBalance(new BigDecimal(0));
         this.creditLimit = new BigDecimal(100);
     }
 
@@ -73,7 +70,7 @@ public class CreditCard extends Savings {
     @Override
     @Transient
     public void setMinimumBalance(BigDecimal minimumBalance) {
-        super.setMonthlyMaintenanceFee(minimumBalance);
+        this.minimumBalance = minimumBalance;
     }
 
     @Override

@@ -40,12 +40,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         httpSecurity.httpBasic();
 
         httpSecurity.authorizeRequests()
-                .mvcMatchers(HttpMethod.POST, "/author/add").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.POST,"/post/add").hasAuthority("ROLE_CONTRIBUTOR")
-                .mvcMatchers(HttpMethod.PATCH, "/author/{id}/update").hasAuthority("ROLE_CONTRIBUTOR")
-                .mvcMatchers(HttpMethod.PATCH,"/post/{id}/update").hasAuthority("ROLE_CONTRIBUTOR")
-                .mvcMatchers(HttpMethod.DELETE,"/author/{id}/delete").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.DELETE,"/post/{id}/delete").hasAuthority("ROLE_ADMIN")
+                //.mvcMatchers(HttpMethod.POST, "/author/add").hasAuthority("ROLE_ADMIN")
                 .anyRequest().permitAll();
 
     }

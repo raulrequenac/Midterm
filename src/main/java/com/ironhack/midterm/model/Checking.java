@@ -23,6 +23,7 @@ public class Checking {
     protected BigDecimal minimumBalance;
     private BigDecimal penaltyFee;
     private BigDecimal monthlyMaintenanceFee;
+    @Enumerated(EnumType.STRING)
     private AccountStatus status;
     @OneToMany(mappedBy = "account")
     private List<Transaction> transactions;
@@ -126,4 +127,14 @@ public class Checking {
     public void setStatus(AccountStatus status) {
         this.status = status;
     }
+
+    public void freeze() {
+        this.status = AccountStatus.FROZEN;
+    }
+
+    public void unFreeze() {
+        this.status = AccountStatus.ACTIVE;
+    }
+
+    public boolean isFrozen() { return this.status.equals(AccountStatus.FROZEN); }
 }

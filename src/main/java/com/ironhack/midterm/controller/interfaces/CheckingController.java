@@ -7,10 +7,5 @@ import com.ironhack.midterm.model.Money;
 import com.ironhack.midterm.model.User;
 
 public interface CheckingController {
-    Checking findById(User user, Integer id);
-    Money findBalance(User user, Integer id);
-    void transfer(User user, Integer id, Transference transference);
     Checking create(AccountInstance accountInstance, Integer secondaryOwnerId);
-    void credit(User user, Integer id, Money amount);
-    void debit(User user, Integer id, Money amount);
 }

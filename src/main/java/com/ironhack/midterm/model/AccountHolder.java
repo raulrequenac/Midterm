@@ -8,9 +8,6 @@ import java.util.Set;
 
 @Entity
 public class AccountHolder extends User {
-    @Id
-    @GeneratedValue
-    private Integer id;
     private LocalDate dateOfBirth;
     @ManyToOne
     private Address address;
@@ -52,11 +49,6 @@ public class AccountHolder extends User {
 
     public void setMailingAddress(Address mailingAddress) {
         this.mailingAddress = mailingAddress;
-    }
-
-    public boolean canAccess(Checking account) {
-        return primaryAccounts.stream().anyMatch(acc -> acc.getId()==account.getId()) ||
-                secondaryAccounts.stream().anyMatch(acc -> acc.getId()==account.getId());
     }
 
     public List<Checking> getPrimaryAccounts() {

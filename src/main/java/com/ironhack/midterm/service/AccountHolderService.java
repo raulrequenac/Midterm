@@ -2,7 +2,9 @@ package com.ironhack.midterm.service;
 
 import com.ironhack.midterm.exceptions.IdNotFoundException;
 import com.ironhack.midterm.model.AccountHolder;
+import com.ironhack.midterm.model.Role;
 import com.ironhack.midterm.repository.AccountHolderRepository;
+import com.ironhack.midterm.repository.RoleRepository;
 import com.ironhack.midterm.util.PasswordUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Service;
 public class AccountHolderService {
     @Autowired
     private AccountHolderRepository accountHolderRepository;
+    @Autowired
+    private RoleRepository roleRepository;
 
     public AccountHolder findById(Integer id) {
         return accountHolderRepository.findById(id).orElseThrow(() -> new IdNotFoundException());
@@ -22,6 +26,7 @@ public class AccountHolderService {
 
     public AccountHolder create(AccountHolder accountHolder) {
         accountHolder.setPassword(PasswordUtility.encryptPassword(accountHolder.getPassword()));
+        roleRepository.save(new Role("ACCOUNT_HOLDER", accountHolder));
         return accountHolderRepository.save(accountHolder);
     }
 }

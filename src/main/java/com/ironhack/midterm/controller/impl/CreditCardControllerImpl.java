@@ -19,18 +19,6 @@ public class CreditCardControllerImpl implements CreditCardController {
     @Autowired
     private CreditCardService creditCardService;
 
-    @GetMapping("/accounts/credit-cards/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    public CreditCard findById(@AuthenticationPrincipal User user, @PathVariable Integer id) {
-        return creditCardService.findById(user, id);
-    }
-
-    @GetMapping("/accounts/credit-cards/{id}/balance")
-    @ResponseStatus(HttpStatus.OK)
-    public Money findBalance(@AuthenticationPrincipal User user, @PathVariable Integer id) {
-        return creditCardService.findBalance(user, id);
-    }
-
     @PostMapping("/accounts/credit-cards")
     @ResponseStatus(HttpStatus.CREATED)
     public CreditCard create(@RequestBody CreditCardInstance creditCardInstance,
@@ -38,17 +26,5 @@ public class CreditCardControllerImpl implements CreditCardController {
                              @RequestParam(value = "creditLimit", required = false) BigDecimal creditLimit,
                              @RequestParam(value = "secondaryOwnerId", required = false) Integer secondaryOwnerId) {
         return creditCardService.create(creditCardInstance, interestRate, creditLimit, secondaryOwnerId);
-    }
-
-    @PostMapping("/accounts/credit-cards/{id}/credit")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void credit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
-        creditCardService.credit(user, id, amount);
-    }
-
-    @PostMapping("/accounts/credit-cards/{id}/debit")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void debit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
-        creditCardService.credit(user, id, amount);
     }
 }

@@ -21,18 +21,6 @@ public class SavingsService {
     @Autowired
     private AccountHolderService accountHolderService;
 
-    public Savings findById(User user, Integer id) {
-        if (!user.isLoggedIn()) throw new NotLoggedInException();
-        Savings savings =  savingsRepository.findById(id).orElseThrow(() -> new IdNotFoundException());
-        if (!user.canAccess(savings)) throw new ForbiddenAccessException();
-        return savings;
-
-    }
-
-    public Money findBalance(User user, Integer id) {
-        return findById(user, id).getBalance();
-    }
-
     public Savings create(AccountInstance accountInstance, BigDecimal interestRate, BigDecimal minimumBalance, Integer secondaryOwnerId) {
         AccountHolder owner = accountHolderService.findById(accountInstance.getPrimaryOwnerId());
         Savings savings = new Savings(accountInstance.getBalance(), accountInstance.getSecretKey(), owner);
@@ -40,21 +28,5 @@ public class SavingsService {
         if (interestRate!=null) savings.setInterestRate(interestRate);
         if (minimumBalance!=null) savings.setMinimumBalance(minimumBalance);
         return savings;
-    }
-
-    public void credit(User user, Integer id, Money amount) {
-        if (!user.isLoggedIn()) throw new NotLoggedInException();
-        Savings savings = findById(user, id);
-        if (!user.canAccess(savings)) throw new ForbiddenAccessException();
-        savings.credit(amount);
-        savingsRepository.save(savings);
-    }
-
-    public void debit (User user, Integer id, Money amount) {
-        if (!user.isLoggedIn()) throw new NotLoggedInException();
-        Savings savings = findById(user, id);
-        if (!user.canAccess(savings)) throw new ForbiddenAccessException();
-        savings.debit(amount);
-        savingsRepository.save(savings);
     }
 }

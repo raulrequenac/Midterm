@@ -8,10 +8,6 @@ import java.util.Set;
 
 @Entity
 public class Admin extends User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     public Admin() {
     }
 
