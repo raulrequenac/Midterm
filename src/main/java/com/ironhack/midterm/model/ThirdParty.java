@@ -1,5 +1,7 @@
 package com.ironhack.midterm.model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +10,7 @@ import java.util.Set;
 
 @Entity
 public class ThirdParty extends User {
+    @NotNull
     private String hashedKey;
 
     public ThirdParty() {

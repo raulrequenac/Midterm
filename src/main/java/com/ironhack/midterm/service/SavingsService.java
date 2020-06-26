@@ -27,6 +27,6 @@ public class SavingsService {
         if (secondaryOwnerId!=null) savings.setSecondaryOwner(accountHolderService.findById(secondaryOwnerId));
         if (interestRate!=null) savings.setInterestRate(interestRate);
         if (minimumBalance!=null) savings.setMinimumBalance(minimumBalance);
-        return savings;
+        return savingsRepository.save(savings);
     }
 }

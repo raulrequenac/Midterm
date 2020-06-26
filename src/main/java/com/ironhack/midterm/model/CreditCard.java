@@ -3,6 +3,7 @@ package com.ironhack.midterm.model;
 import com.ironhack.midterm.enums.AccountStatus;
 import com.ironhack.midterm.exceptions.IllegalCreditLimitException;
 import com.ironhack.midterm.exceptions.IllegalInterestRateException;
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -20,10 +21,6 @@ public class CreditCard extends Savings {
         super(balance, null, primaryOwner);
         setMinimumBalance(new BigDecimal(0));
         this.creditLimit = new BigDecimal(100);
-    }
-
-    public BigDecimal getCreditLimit() {
-        return creditLimit;
     }
 
     public void setCreditLimit(BigDecimal creditLimit) {

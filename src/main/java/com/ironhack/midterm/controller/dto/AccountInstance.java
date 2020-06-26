@@ -14,8 +14,4 @@ public class AccountInstance extends CreditCardInstance {
     public Integer getSecretKey() {
         return secretKey;
     }
-
-    public void setSecretKey(Integer secretKey) {
-        this.secretKey = secretKey;
-    }
 }

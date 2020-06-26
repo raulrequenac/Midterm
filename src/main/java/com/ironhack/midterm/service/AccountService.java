@@ -45,21 +45,24 @@ public class AccountService {
 
     public void credit(User user, Integer id, Money amount) {
         if (!user.isLoggedIn()) throw new NotLoggedInException();
-        Checking checking = findById(user, id);
-        if (checking.isFrozen()) throw new FrozenAccountException();
+        Checking account = findById(user, id);
+        if (account.isFrozen()) throw new FrozenAccountException();
         if (!canAccess(id, user)) throw new ForbiddenAccessException();
-        transactionService.isFraud(checking);
-        checking.credit(amount);
-        saveAccount(checking);
+        transactionService.isFraud(user, account);
+        account.credit(amount);
+        saveAccount(account);
+        transactionService.create(user, account);
     }
 
     public void debit (User user, Integer id, Money amount) {
         if (!user.isLoggedIn()) throw new NotLoggedInException();
-        Checking checking = findById(user, id);
+        Checking account = findById(user, id);
+        if (account.isFrozen()) throw new FrozenAccountException();
         if (!canAccess(id, user)) throw new ForbiddenAccessException();
-        transactionService.isFraud(checking);
-        checking.debit(amount);
-        saveAccount(checking);
+        transactionService.isFraud(user, account);
+        account.debit(amount);
+        saveAccount(account);
+        transactionService.create(user, account);
     }
 
     @Transactional
@@ -82,6 +85,7 @@ public class AccountService {
     }
 
     public boolean canAccess(Integer accountId, User user) {
+        if (user.getRoles().contains("ADMIN")) return true;
         return checkingRepository.findByIdAndPrimaryOwner(accountId, user)!=null ||
                 checkingRepository.findByIdAndSecondaryOwner(accountId, user)!=null;
     }

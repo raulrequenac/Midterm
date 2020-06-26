@@ -1,6 +1,7 @@
 package com.ironhack.midterm.service;
 
 import com.ironhack.midterm.exceptions.IdNotFoundException;
+import com.ironhack.midterm.exceptions.NameNotFoundException;
 import com.ironhack.midterm.model.AccountHolder;
 import com.ironhack.midterm.model.Role;
 import com.ironhack.midterm.repository.AccountHolderRepository;
@@ -21,7 +22,9 @@ public class AccountHolderService {
     }
 
     public AccountHolder findByName(String name) {
-        return accountHolderRepository.findByName(name);
+        AccountHolder accountHolder = accountHolderRepository.findByName(name);
+        if (accountHolder==null) throw new NameNotFoundException();
+        return accountHolder;
     }
 
     public AccountHolder create(AccountHolder accountHolder) {

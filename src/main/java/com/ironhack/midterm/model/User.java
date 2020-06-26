@@ -1,9 +1,12 @@
 package com.ironhack.midterm.model;
 
 import com.ironhack.midterm.exceptions.AlreadyLoggedInException;
+import com.ironhack.midterm.exceptions.AlreadyLoggedOutException;
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -12,12 +15,17 @@ public abstract class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotNull
     private String name;
     private boolean loggedIn;
+    @NotNull
     private String username;
+    @NotNull
     private String password;
     @OneToMany(fetch= FetchType.EAGER, cascade= CascadeType.ALL, mappedBy="user")
     protected Set<Role> roles = new HashSet<>();
+    @OneToMany(mappedBy = "user")
+    protected List<Transaction> transactions;
 
     public User() { }
 
@@ -54,6 +62,7 @@ public abstract class User {
     }
 
     public void logOut() {
+        if (!this.loggedIn) throw new AlreadyLoggedOutException();
         this.loggedIn = false;
     }
 
@@ -80,6 +89,4 @@ public abstract class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
-
-    public boolean canAccess(Checking account) { return true; }
 }

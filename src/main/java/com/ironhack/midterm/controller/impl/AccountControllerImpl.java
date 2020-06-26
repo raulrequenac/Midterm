@@ -16,31 +16,31 @@ public class AccountControllerImpl implements AccountController {
     @Autowired
     private AccountService accountService;
 
-    @GetMapping("/accounts/checkings/{id}")
+    @GetMapping("/accounts/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Checking findById(@AuthenticationPrincipal User user, @PathVariable Integer id) {
         return accountService.findById(user, id);
     }
 
-    @GetMapping("/accounts/checkings/{id}/balance")
+    @GetMapping("/accounts/{id}/balance")
     @ResponseStatus(HttpStatus.OK)
     public Money findBalance(@AuthenticationPrincipal User user, @PathVariable Integer id) {
         return accountService.findBalance(user, id);
     }
 
-    @PostMapping("/accounts/checkings/{id}/credit")
+    @PostMapping("/accounts/{id}/credit")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void credit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
         accountService.credit(user, id, amount);
     }
 
-    @PostMapping("/accounts/checkings/{id}/debit")
+    @PostMapping("/accounts/{id}/debit")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void debit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
         accountService.debit(user, id, amount);
     }
 
-    @PostMapping("/accounts/checkings/{id}/unfreeze")
+    @PostMapping("/accounts/{id}/unfreeze")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void unfreeze(@AuthenticationPrincipal User user, @PathVariable Integer id) {
         accountService.unfreeze(user, id);

@@ -15,15 +15,7 @@ public class CreditCardInstance {
         return balance;
     }
 
-    public void setBalance(Money balance) {
-        this.balance = balance;
-    }
-
     public Integer getPrimaryOwnerId() {
         return primaryOwnerId;
-    }
-
-    public void setPrimaryOwnerId(Integer primaryOwnerId) {
-        this.primaryOwnerId = primaryOwnerId;
     }
 }

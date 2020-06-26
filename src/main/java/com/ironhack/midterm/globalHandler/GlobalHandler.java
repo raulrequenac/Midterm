@@ -14,6 +14,11 @@ public class GlobalHandler {
         response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
     }
 
+    @ExceptionHandler(AlreadyLoggedOutException.class)
+    public void handleAlreadyLoggedOutException(AlreadyLoggedOutException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
+    }
+
     @ExceptionHandler(ForbiddenAccessException.class)
     public void handleForbiddenAccessException(ForbiddenAccessException e, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, e.getMessage());
@@ -37,6 +42,11 @@ public class GlobalHandler {
     @ExceptionHandler(IllegalMinimumBalanceException.class)
     public void handleIllegalMinimumBalanceException(IllegalMinimumBalanceException e, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler(NameNotFoundException.class)
+    public void handleNameNotFoundException(NameNotFoundException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_NOT_FOUND, e.getMessage());
     }
 
     @ExceptionHandler(NotEnoughBalanceException.class)

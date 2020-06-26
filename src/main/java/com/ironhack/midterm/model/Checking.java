@@ -1,10 +1,13 @@
 package com.ironhack.midterm.model;
 
 import com.ironhack.midterm.enums.AccountStatus;
+import com.ironhack.midterm.exceptions.AlreadyActiveException;
 import com.ironhack.midterm.exceptions.NotEnoughBalanceException;
+import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,9 +17,12 @@ public class Checking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Embedded
+    @NotNull
     protected Money balance;
+    @NotNull
     private Integer secretKey;
     @ManyToOne
+    @NotNull
     private AccountHolder primaryOwner;
     @ManyToOne
     private AccountHolder secondaryOwner;
@@ -40,6 +46,7 @@ public class Checking {
         this.penaltyFee = new BigDecimal(40);
         this.monthlyMaintenanceFee = new BigDecimal(12);
         this.status = AccountStatus.ACTIVE;
+        transactions = new ArrayList<>();
     }
 
     public void credit(Money amount) {
@@ -68,28 +75,12 @@ public class Checking {
         return balance;
     }
 
-    public void setBalance(Money balance) {
-        this.balance = balance;
-    }
-
     public Integer getSecretKey() {
         return secretKey;
     }
 
     public void setSecretKey(Integer secretKey) {
         this.secretKey = secretKey;
-    }
-
-    public AccountHolder getPrimaryOwner() {
-        return primaryOwner;
-    }
-
-    public void setPrimaryOwner(AccountHolder primaryOwner) {
-        this.primaryOwner = primaryOwner;
-    }
-
-    public AccountHolder getSecondaryOwner() {
-        return secondaryOwner;
     }
 
     public void setSecondaryOwner(AccountHolder secondaryOwner) {
@@ -102,14 +93,6 @@ public class Checking {
 
     public void setMinimumBalance(BigDecimal minimumBalance) {
         this.minimumBalance = minimumBalance;
-    }
-
-    public BigDecimal getPenaltyFee() {
-        return penaltyFee;
-    }
-
-    public void setPenaltyFee(BigDecimal penaltyFee) {
-        this.penaltyFee = penaltyFee;
     }
 
     public BigDecimal getMonthlyMaintenanceFee() {
@@ -133,6 +116,7 @@ public class Checking {
     }
 
     public void unFreeze() {
+        if (this.status.equals(AccountStatus.ACTIVE)) throw new AlreadyActiveException();
         this.status = AccountStatus.ACTIVE;
     }
 

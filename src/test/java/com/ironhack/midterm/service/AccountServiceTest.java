@@ -1,11 +1,13 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.controller.dto.AccountInstance;
 import com.ironhack.midterm.controller.dto.CreditCardInstance;
-import com.ironhack.midterm.model.AccountHolder;
-import com.ironhack.midterm.model.Address;
-import com.ironhack.midterm.model.CreditCard;
-import com.ironhack.midterm.model.Money;
-import com.ironhack.midterm.repository.AddressRepository;
+import com.ironhack.midterm.controller.dto.Transference;
+import com.ironhack.midterm.exceptions.AlreadyActiveException;
+import com.ironhack.midterm.exceptions.FraudDetectedException;
+import com.ironhack.midterm.model.*;
+import com.ironhack.midterm.repository.*;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Currency;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,26 +26,90 @@ class AccountServiceTest {
     @Autowired
     private AccountHolderService accountHolderService;
     @Autowired
-    private CreditCardService creditCardService;
+    private AccountHolderRepository accountHolderRepository;
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private SavingsService savingsService;
+    @Autowired
+    private SavingsRepository savingsRepository;
     @Autowired
     private AddressRepository addressRepository;
     @Autowired
     private UserDetailsServiceImpl userService;
+    @Autowired
+    private TransactionRepository transactionRepository;
+    @Autowired
+    private TransactionService transactionService;
 
+    private Address address;
     private AccountHolder user;
-    private CreditCard creditCard;
+    private Savings account;
 
     @BeforeEach
     public void setUp() {
-        Address address = new Address();
+        address = new Address();
         addressRepository.save(address);
         user = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
         userService.login(user);
-        creditCard = creditCardService.create(new CreditCardInstance(new Money(new BigDecimal(300)), user.getId()), null, null, null);
+        account = savingsService.create(new AccountInstance(new Money(new BigDecimal(300)), user.getId(), 1234), null, null, null);
+    }
+
+    @AfterEach
+    public void tearDown() {
+        transactionRepository.deleteAll();
+        savingsRepository.deleteAll();
+        accountHolderRepository.deleteAll();
+        addressRepository.deleteAll();
     }
 
     @Test
     public void findById() {
-        assertEquals(CreditCard.class, accountService.findById(user, 1).getClass());
+        assertDoesNotThrow(() -> accountService.findById(user, account.getId()));
+    }
+
+    @Test
+    public void findBalance() {
+        assertEquals(account.getBalance().getAmount(), accountService.findBalance(user, account.getId()).getAmount());
+    }
+
+    @Test
+    public void credit() {
+        accountService.credit(user, account.getId(), new Money(new BigDecimal(30)));
+        assertEquals(account.getBalance().getAmount().add(new BigDecimal(30)), accountService.findBalance(user, account.getId()).getAmount());
+    }
+
+    @Test
+    public void debit() {
+        accountService.debit(user, account.getId(), new Money(new BigDecimal(30)));
+        assertEquals(account.getBalance().getAmount().subtract(new BigDecimal(30)), accountService.findBalance(user, account.getId()).getAmount());
+    }
+
+    @Test
+    public void transfer() {
+        Savings account2 = savingsService.create(new AccountInstance(new Money(new BigDecimal(300)), user.getId(), 1234), null, null, null);
+        accountService.transfer(user, account.getId(), new Transference(account2.getId(), user.getName(), Currency.getInstance("USD"), new BigDecimal(100)));
+        assertEquals(account2.getBalance().getAmount().add(new BigDecimal(100)), accountService.findBalance(user, account2.getId()).getAmount());
+        assertEquals(account.getBalance().getAmount().subtract(new BigDecimal(100)), accountService.findBalance(user, account.getId()).getAmount());
+    }
+
+    @Test
+    public void unfreeze() {
+        try {
+            for (int i = 4; i > 0; i--) accountService.credit(user, account.getId(), new Money(new BigDecimal(10)));
+        } catch (FraudDetectedException e) {
+            assertDoesNotThrow(() -> accountService.unfreeze(user, account.getId()));
+        }
+    }
+
+    @Test
+    public void unfreeze_AlreadyActive() {
+        assertThrows(AlreadyActiveException.class, () -> accountService.unfreeze(user, account.getId()));
+    }
+
+    @Test
+    public void canAccess_false() {
+        AccountHolder user2 = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
+        assertFalse(accountService.canAccess(account.getId(), user2));
     }
 }

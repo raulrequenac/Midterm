@@ -11,9 +11,14 @@ public class Transaction {
     private LocalDate realizedAt;
     @ManyToOne
     private Checking account;
+    @ManyToOne
+    private User user;
 
-    public Transaction(Checking account) {
+    public Transaction() { }
+
+    public Transaction(Checking account, User user) {
         this.account = account;
+        this.user = user;
         this.realizedAt = LocalDate.now();
     }
 
@@ -23,21 +28,5 @@ public class Transaction {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public LocalDate getRealizedAt() {
-        return realizedAt;
-    }
-
-    public void setRealizedAt(LocalDate realizedAt) {
-        this.realizedAt = realizedAt;
-    }
-
-    public Checking getAccount() {
-        return account;
-    }
-
-    public void setAccount(Checking account) {
-        this.account = account;
     }
 }

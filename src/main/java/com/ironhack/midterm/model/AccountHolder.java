@@ -1,13 +1,17 @@
 package com.ironhack.midterm.model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Entity
 public class AccountHolder extends User {
+    @NotNull
     private LocalDate dateOfBirth;
     @ManyToOne
     private Address address;
@@ -25,45 +29,10 @@ public class AccountHolder extends User {
         super(name, username, password);
         this.dateOfBirth = dateOfBirth;
         this.address = address;
+        primaryAccounts = new ArrayList<>();
     }
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public Address getMailingAddress() {
-        return mailingAddress;
-    }
-
-    public void setMailingAddress(Address mailingAddress) {
-        this.mailingAddress = mailingAddress;
-    }
-
-    public List<Checking> getPrimaryAccounts() {
-        return primaryAccounts;
-    }
-
-    public void setPrimaryAccounts(List<Checking> primaryAccounts) {
-        this.primaryAccounts = primaryAccounts;
-    }
-
-    public List<Checking> getSecondaryAccounts() {
-        return secondaryAccounts;
-    }
-
-    public void setSecondaryAccounts(List<Checking> secondaryAccounts) {
-        this.secondaryAccounts = secondaryAccounts;
     }
 }
