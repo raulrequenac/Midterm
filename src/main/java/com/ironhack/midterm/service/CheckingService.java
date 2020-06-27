@@ -1,9 +1,12 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.MidtermApplication;
 import com.ironhack.midterm.controller.dto.AccountInstance;
 import com.ironhack.midterm.model.*;
 import com.ironhack.midterm.repository.CheckingRepository;
 import com.ironhack.midterm.repository.StudentCheckingRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +21,10 @@ public class CheckingService {
     @Autowired
     private AccountHolderService accountHolderService;
 
+    private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
+
     public Checking create(AccountInstance accountInstance, Integer secondaryOwnerId) {
+        LOGGER.info("[INIT] - Create Checking Account");
         AccountHolder primaryOwner = accountHolderService.findById(accountInstance.getPrimaryOwnerId());
         AccountHolder secondaryOwner = null;
         if (secondaryOwnerId!=null)
@@ -26,13 +32,19 @@ public class CheckingService {
 
         LocalDate today = LocalDate.now();
         if (today.minusYears(24).isBefore(primaryOwner.getDateOfBirth())) {
+            LOGGER.info("[END] - Create Checking Account: Primary Owner is under 24yo");
+            LOGGER.info("[INIT] - Create Student Checking Account");
             StudentChecking studentChecking = new StudentChecking(accountInstance.getBalance(), accountInstance.getSecretKey(), primaryOwner);
             if (secondaryOwner != null) studentChecking.setSecondaryOwner(secondaryOwner);
-            return studentCheckingRepository.save(studentChecking);
+            StudentChecking st = studentCheckingRepository.save(studentChecking);
+            LOGGER.info("[END] - Create Student Checking Account");
+            return st;
         }
 
         Checking checking = new Checking(accountInstance.getBalance(), accountInstance.getSecretKey(), primaryOwner);
         if (secondaryOwner != null) checking.setSecondaryOwner(secondaryOwner);
-        return checkingRepository.save(checking);
+        Checking c = checkingRepository.save(checking);
+        LOGGER.info("[END] - Create Checking Account");
+        return c;
     }
 }

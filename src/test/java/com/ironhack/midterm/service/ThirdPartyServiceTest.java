@@ -24,6 +24,13 @@ class ThirdPartyServiceTest {
     }
 
     @Test
+    public void correctHashedKey() {
+        ThirdParty thirdParty = new ThirdParty("thirdParty", "thirdParty", "thirdParty", "thirdParty");
+        thirdPartyService.create(thirdParty);
+        assertTrue(thirdPartyService.correctHashedKey(thirdParty, thirdParty.getHashedKey()));
+    }
+
+    @Test
     public void create() {
         ThirdParty thirdParty = new ThirdParty("thirdParty", "thirdParty", "thirdParty", "thirdParty");
         thirdPartyService.create(thirdParty);

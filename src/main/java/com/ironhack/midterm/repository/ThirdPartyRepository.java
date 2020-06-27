@@ -4,4 +4,5 @@ import com.ironhack.midterm.model.ThirdParty;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ThirdPartyRepository extends JpaRepository<ThirdParty, Integer> {
+    ThirdParty findByIdAndHashedKey(Integer id, String hashedKey);
 }

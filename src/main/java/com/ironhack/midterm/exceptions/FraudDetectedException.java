@@ -1,10 +1,14 @@
 package com.ironhack.midterm.exceptions;
 
-public class FraudDetectedException extends RuntimeException {
-    public FraudDetectedException() {
-    }
+import com.ironhack.midterm.MidtermApplication;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-    public FraudDetectedException(String message) {
-        super(message);
+public class FraudDetectedException extends RuntimeException {
+    private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
+
+    public FraudDetectedException() {
+        super("A possible fraud was detected");
+        LOGGER.warn("[ERROR] - FraudDetectedException");
     }
 }

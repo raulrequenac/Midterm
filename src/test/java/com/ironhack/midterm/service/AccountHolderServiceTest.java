@@ -55,21 +55,10 @@ class AccountHolderServiceTest {
         assertThrows(IdNotFoundException.class, () -> accountHolderService.findById(200));
     }
 
-    @Test void findByName_Existing_ReturnAccountHolder() {
-        assertEquals(accountHolder.getName(), accountHolderService.findByName(accountHolder.getName()).getName());
-    }
-
-    @Test
-    public void findByName_NotExisting_ThrowsError(){
-        assertThrows(NameNotFoundException.class, () -> accountHolderService.findByName("lukhuhñh"));
-    }
-
     @Test
     public void create() {
         AccountHolder a = new AccountHolder("b", "b", "b", LocalDate.now(), address);
         accountHolderService.create(a);
         assertEquals("b", accountHolderService.findById(a.getId()).getName());
     }
-
-
 }

@@ -1,10 +1,14 @@
 package com.ironhack.midterm.exceptions;
 
-public class IllegalCreditLimitException extends RuntimeException {
-    public IllegalCreditLimitException() {
-    }
+import com.ironhack.midterm.MidtermApplication;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-    public IllegalCreditLimitException(String message) {
-        super(message);
+public class IllegalCreditLimitException extends RuntimeException {
+    private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
+
+    public IllegalCreditLimitException() {
+        super("The credit limit must be higher than 100 but not higher than 100000");
+        LOGGER.warn("[ERROR] - IllegalCreditLimitException");
     }
 }

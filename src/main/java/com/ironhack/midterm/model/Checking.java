@@ -121,4 +121,12 @@ public class Checking {
     }
 
     public boolean isFrozen() { return this.status.equals(AccountStatus.FROZEN); }
+
+    public AccountHolder getPrimaryOwner() {
+        return primaryOwner;
+    }
+
+    public AccountHolder getSecondaryOwner() {
+        return secondaryOwner;
+    }
 }

@@ -9,6 +9,11 @@ import java.io.IOException;
 
 @ControllerAdvice
 public class GlobalHandler {
+    @ExceptionHandler(AlreadyActiveException.class)
+    public void handleAlreadyActiveException(AlreadyActiveException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
+    }
+
     @ExceptionHandler(AlreadyLoggedInException.class)
     public void handleAlreadyLoggedInException(AlreadyLoggedInException e, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
@@ -22,6 +27,16 @@ public class GlobalHandler {
     @ExceptionHandler(ForbiddenAccessException.class)
     public void handleForbiddenAccessException(ForbiddenAccessException e, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, e.getMessage());
+    }
+
+    @ExceptionHandler(FraudDetectedException.class)
+    public void handleFraudDetectedException(FraudDetectedException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
+    }
+
+    @ExceptionHandler(FrozenAccountException.class)
+    public void handleFrozenAccountException(FrozenAccountException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
     }
 
     @ExceptionHandler(IdNotFoundException.class)
@@ -56,16 +71,6 @@ public class GlobalHandler {
 
     @ExceptionHandler(NotLoggedInException.class)
     public void handleNotLoggedInException(NotLoggedInException e, HttpServletResponse response) throws IOException {
-        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
-    }
-
-    @ExceptionHandler(FraudDetectedException.class)
-    public void handleFraudDetectedException(FraudDetectedException e, HttpServletResponse response) throws IOException {
-        response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
-    }
-
-    @ExceptionHandler(FrozenAccountException.class)
-    public void handleFrozenAccountException(FrozenAccountException e, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
     }
 }

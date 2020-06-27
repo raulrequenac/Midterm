@@ -33,7 +33,7 @@ public class CreditCard extends Savings {
     @Override
     public void setInterestRate(BigDecimal interestRate) {
         if (interestRate.compareTo(BigDecimal.valueOf(0.1))<0 || interestRate.compareTo(BigDecimal.valueOf(0.2))>=0)
-            throw new IllegalInterestRateException();
+            throw new IllegalInterestRateException(0.1, 0.2);
         this.interestRate = interestRate;
     }
 

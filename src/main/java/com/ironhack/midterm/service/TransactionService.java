@@ -1,14 +1,19 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.MidtermApplication;
 import com.ironhack.midterm.exceptions.FraudDetectedException;
 import com.ironhack.midterm.model.Checking;
 import com.ironhack.midterm.model.Transaction;
 import com.ironhack.midterm.model.User;
 import com.ironhack.midterm.repository.TransactionRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Service
 public class TransactionService {
@@ -17,19 +22,35 @@ public class TransactionService {
     @Autowired
     private AccountService accountService;
 
+    private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
+
+    public Transaction findLastTransaction() {
+        return transactionRepository.findLastTransaction();
+    }
+
     public Transaction create(User user, Checking account) {
-        return transactionRepository.save(new Transaction(account, user));
+        LOGGER.info("[INIT] - Create Transaction Account");
+        Transaction t = transactionRepository.save(new Transaction(account, user));
+        LOGGER.info("[END] - Create Transaction Account");
+        return t;
     }
 
     public void isFraud(User user, Checking account) {
-        LocalDate startOfDay = LocalDate.now().atStartOfDay().toLocalDate();
+        LOGGER.info("[INIT] - Is Account with id: "+account.getId()+" fraud");
+        Transaction lastTransaction = findLastTransaction();
+        Long secsBetween = lastTransaction==null ? 2 : Duration.between(lastTransaction.getRealizedAt(), LocalDateTime.now()).toSeconds();
+        if (secsBetween<=1) freeze(account);
+        LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
         Integer today = transactionRepository.todayTotal(account.getId(), user.getId(), startOfDay);
         Integer defaultMax = transactionRepository.maxTotal(account.getId(), user.getId(), startOfDay);
         double max = defaultMax==null ? 3 : (Math.max(defaultMax, 2)*1.5);
-        if (today>=max) {
-            account.freeze();
-            accountService.saveAccount(account);
-            throw new FraudDetectedException();
-        }
+        if (today>=max) freeze(account);
+        LOGGER.info("[END] - Is Account with id: "+account.getId()+" fraud");
+    }
+
+    private void freeze(Checking account) {
+        account.freeze();
+        accountService.saveAccount(account);
+        throw new FraudDetectedException();
     }
 }

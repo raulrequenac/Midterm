@@ -1,14 +1,14 @@
 package com.ironhack.midterm.model;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 public class Transaction {
     @Id
     @GeneratedValue
     private Integer id;
-    private LocalDate realizedAt;
+    private LocalDateTime realizedAt;
     @ManyToOne
     private Checking account;
     @ManyToOne
@@ -19,7 +19,7 @@ public class Transaction {
     public Transaction(Checking account, User user) {
         this.account = account;
         this.user = user;
-        this.realizedAt = LocalDate.now();
+        this.realizedAt = LocalDateTime.now();
     }
 
     public Integer getId() {
@@ -29,4 +29,6 @@ public class Transaction {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    public LocalDateTime getRealizedAt() { return realizedAt; }
 }

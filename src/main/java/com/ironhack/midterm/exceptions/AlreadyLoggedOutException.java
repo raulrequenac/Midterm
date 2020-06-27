@@ -1,10 +1,14 @@
 package com.ironhack.midterm.exceptions;
 
-public class AlreadyLoggedOutException extends RuntimeException {
-    public AlreadyLoggedOutException() {
-    }
+import com.ironhack.midterm.MidtermApplication;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-    public AlreadyLoggedOutException(String message) {
-        super(message);
+public class AlreadyLoggedOutException extends RuntimeException {
+    private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
+
+    public AlreadyLoggedOutException() {
+        super("User is already logged out");
+        LOGGER.warn("[ERROR] - AlreadyLoggedOutException");
     }
 }

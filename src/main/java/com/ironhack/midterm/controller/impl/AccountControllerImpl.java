@@ -30,14 +30,16 @@ public class AccountControllerImpl implements AccountController {
 
     @PostMapping("/accounts/{id}/credit")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void credit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
-        accountService.credit(user, id, amount);
+    public void credit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount,
+                       @RequestHeader(required = false) String hashedKey) {
+        accountService.credit(user, id, amount, hashedKey);
     }
 
     @PostMapping("/accounts/{id}/debit")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void debit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount) {
-        accountService.debit(user, id, amount);
+    public void debit(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Money amount,
+                      @RequestHeader(required = false) String hashedKey) {
+        accountService.debit(user, id, amount, hashedKey);
     }
 
     @PostMapping("/accounts/{id}/unfreeze")
@@ -48,7 +50,8 @@ public class AccountControllerImpl implements AccountController {
 
     @PostMapping("/accounts/{id}/transfer")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void transfer(@AuthenticationPrincipal User user, @PathVariable Integer id, @RequestBody Transference transference) {
+    public void transfer(@AuthenticationPrincipal User user, @PathVariable Integer id,
+                         @RequestBody Transference transference) {
         accountService.transfer(user, id, transference);
     }
 }

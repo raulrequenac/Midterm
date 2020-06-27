@@ -30,7 +30,7 @@ public class Savings extends Checking {
 
     public void setInterestRate(BigDecimal interestRate) {
         if (interestRate.compareTo(BigDecimal.valueOf(0))<0 || interestRate.compareTo(BigDecimal.valueOf(0.5))>0)
-            throw new IllegalInterestRateException();
+            throw new IllegalInterestRateException(0, 0.5);
         this.interestRate = interestRate;
     }
 

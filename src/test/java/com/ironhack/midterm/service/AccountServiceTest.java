@@ -1,9 +1,9 @@
 package com.ironhack.midterm.service;
 
 import com.ironhack.midterm.controller.dto.AccountInstance;
-import com.ironhack.midterm.controller.dto.CreditCardInstance;
 import com.ironhack.midterm.controller.dto.Transference;
 import com.ironhack.midterm.exceptions.AlreadyActiveException;
+import com.ironhack.midterm.exceptions.ForbiddenAccessException;
 import com.ironhack.midterm.exceptions.FraudDetectedException;
 import com.ironhack.midterm.model.*;
 import com.ironhack.midterm.repository.*;
@@ -44,6 +44,7 @@ class AccountServiceTest {
 
     private Address address;
     private AccountHolder user;
+    private AccountHolder secondUser;
     private Savings account;
 
     @BeforeEach
@@ -52,7 +53,8 @@ class AccountServiceTest {
         addressRepository.save(address);
         user = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
         userService.login(user);
-        account = savingsService.create(new AccountInstance(new Money(new BigDecimal(300)), user.getId(), 1234), null, null, null);
+        secondUser = accountHolderService.create(new AccountHolder("secondUser", "user", "user", LocalDate.of(1997, 10, 22), address));
+        account = savingsService.create(new AccountInstance(new Money(new BigDecimal(300)), user.getId(), 1234), null, null, secondUser.getId());
     }
 
     @AfterEach
@@ -69,20 +71,39 @@ class AccountServiceTest {
     }
 
     @Test
+    public void findByIdAndOwnerName() {
+        assertDoesNotThrow(() -> accountService.findByIdAndOwnerName(secondUser.getName(), account.getId()));
+    }
+
+    @Test
     public void findBalance() {
         assertEquals(account.getBalance().getAmount(), accountService.findBalance(user, account.getId()).getAmount());
     }
 
     @Test
     public void credit() {
-        accountService.credit(user, account.getId(), new Money(new BigDecimal(30)));
+        accountService.credit(user, account.getId(), new Money(new BigDecimal(30)), null);
         assertEquals(account.getBalance().getAmount().add(new BigDecimal(30)), accountService.findBalance(user, account.getId()).getAmount());
     }
 
     @Test
+    public void credit_cannotAccess() {
+        AccountHolder otherUser = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
+        userService.login(otherUser);
+        assertThrows(ForbiddenAccessException.class, () -> accountService.credit(otherUser, account.getId(), new Money(new BigDecimal(30)), null));
+    }
+
+    @Test
     public void debit() {
-        accountService.debit(user, account.getId(), new Money(new BigDecimal(30)));
+        accountService.debit(user, account.getId(), new Money(new BigDecimal(30)), null);
         assertEquals(account.getBalance().getAmount().subtract(new BigDecimal(30)), accountService.findBalance(user, account.getId()).getAmount());
+    }
+
+    @Test
+    public void debit_cannotAccess() {
+        AccountHolder otherUser = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
+        userService.login(otherUser);
+        assertThrows(ForbiddenAccessException.class, () -> accountService.debit(otherUser, account.getId(), new Money(new BigDecimal(30)), null));
     }
 
     @Test
@@ -96,7 +117,10 @@ class AccountServiceTest {
     @Test
     public void unfreeze() {
         try {
-            for (int i = 4; i > 0; i--) accountService.credit(user, account.getId(), new Money(new BigDecimal(10)));
+            for (int i = 0; i < 4; i++) {
+                System.out.println(i);
+                accountService.credit(user, account.getId(), new Money(new BigDecimal(10)), null);
+            }
         } catch (FraudDetectedException e) {
             assertDoesNotThrow(() -> accountService.unfreeze(user, account.getId()));
         }
