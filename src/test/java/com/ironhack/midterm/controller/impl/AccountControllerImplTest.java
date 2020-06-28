@@ -1,10 +1,16 @@
 package com.ironhack.midterm.controller.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
 import com.ironhack.midterm.controller.dto.Transference;
+import com.ironhack.midterm.model.AccountHolder;
 import com.ironhack.midterm.model.Checking;
 import com.ironhack.midterm.model.Money;
+import com.ironhack.midterm.repository.AccountHolderRepository;
+import com.ironhack.midterm.service.AccountHolderService;
 import com.ironhack.midterm.service.AccountService;
+import com.ironhack.midterm.service.UserDetailsServiceImpl;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +23,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Currency;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,6 +38,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class AccountControllerImplTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
+    @Autowired
+    private UserDetailsServiceImpl userService;
 
     @MockBean
     private AccountService accountService;
@@ -44,18 +53,18 @@ class AccountControllerImplTest {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 
         balance = new Money(new BigDecimal(100));
-        checking = new Checking(balance, 1234, null);
+        checking = new Checking(balance, 1234, (AccountHolder)userService.findById(2));
         checking.setId(1);
-        when(accountService.findById(any(), any())).thenReturn(checking);
+        when(accountService.findByIdAndReturnString(any(), any())).thenReturn(checking.toString());
         when(accountService.findBalance(any(), any())).thenReturn(new Money(new BigDecimal(100)));
     }
 
     @Test
     @WithMockUser(username = "user", password = "user")
     public void findById() throws Exception {
-        mockMvc.perform(get("/accounts/1"))
+        assertTrue(mockMvc.perform(get("/accounts/1"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value("1"));
+                .andReturn().getResponse().getContentAsString().contains("id=1"));
     }
 
     @Test

@@ -62,4 +62,18 @@ public class Savings extends Checking {
     public void setMonthlyMaintenanceFee(BigDecimal monthlyMaintenanceFee) {
         super.setMonthlyMaintenanceFee(monthlyMaintenanceFee);
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\n\tid: " + id +
+                ",\n\tbalance: " + balance +
+                ",\n\tsecretKey: " + secretKey +
+                ",\n\tprimaryOwner: " + primaryOwner.getName() +
+                ",\n\tminimumBalance: " + minimumBalance +
+                ",\n\tpenaltyFee: " + penaltyFee +
+                ",\n\tstatus: " + status +
+                ",\n\tinterestRate: " + interestRate +
+                "\n}";
+    }
 }

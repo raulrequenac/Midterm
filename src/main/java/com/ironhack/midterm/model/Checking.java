@@ -16,24 +16,24 @@ import java.util.List;
 public class Checking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    protected Integer id;
     @Embedded
     @NotNull
     protected Money balance;
     @NotNull
-    private String secretKey;
+    protected String secretKey;
     @ManyToOne
     @NotNull
-    private AccountHolder primaryOwner;
+    protected AccountHolder primaryOwner;
     @ManyToOne
-    private AccountHolder secondaryOwner;
+    protected AccountHolder secondaryOwner;
     protected BigDecimal minimumBalance;
-    private BigDecimal penaltyFee;
-    private BigDecimal monthlyMaintenanceFee;
+    protected BigDecimal penaltyFee;
+    protected BigDecimal monthlyMaintenanceFee;
     @Enumerated(EnumType.STRING)
-    private AccountStatus status;
+    protected AccountStatus status;
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
-    private List<Transaction> transactions;
+    protected List<Transaction> transactions;
 
     public Checking() {
     }
@@ -130,5 +130,19 @@ public class Checking {
 
     public AccountHolder getSecondaryOwner() {
         return secondaryOwner;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\n\tid: " + id +
+                ",\n\tbalance: " + balance.toString() +
+                ",\n\tsecretKey: " + secretKey +
+                ",\n\tprimaryOwner: " + primaryOwner.getName() +
+                ",\n\tminimumBalance: " + minimumBalance +
+                ",\n\tpenaltyFee: " + penaltyFee +
+                ",\n\tmonthlyMaintenanceFee: " + monthlyMaintenanceFee +
+                ",\n\tstatus: " + status +
+                "\n}";
     }
 }

@@ -2,7 +2,6 @@ package com.ironhack.midterm.controller.impl;
 
 import com.ironhack.midterm.controller.dto.Transference;
 import com.ironhack.midterm.controller.interfaces.AccountController;
-import com.ironhack.midterm.model.Checking;
 import com.ironhack.midterm.model.Money;
 import com.ironhack.midterm.model.User;
 import com.ironhack.midterm.service.AccountService;
@@ -18,8 +17,8 @@ public class AccountControllerImpl implements AccountController {
 
     @GetMapping("/accounts/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Checking findById(@AuthenticationPrincipal User user, @PathVariable Integer id) {
-        return accountService.findById(user, id);
+    public String findById(@AuthenticationPrincipal User user, @PathVariable Integer id) {
+        return accountService.findByIdAndReturnString(user, id);
     }
 
     @GetMapping("/accounts/{id}/balance")

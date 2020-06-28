@@ -81,4 +81,16 @@ public class CreditCard extends Savings {
     public void setStatus(AccountStatus status) {
         super.setStatus(status);
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\n\tid: " + id +
+                ",\n\tbalance: " + balance +
+                ",\n\tprimaryOwner: " + primaryOwner.getName() +
+                ",\n\tpenaltyFee: " + penaltyFee +
+                ",\n\tinterestRate: " + interestRate +
+                ",\n\tcreditLimit: " + creditLimit +
+                "\n}";
+    }
 }

@@ -1,5 +1,6 @@
 package com.ironhack.midterm.service;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.ironhack.midterm.MidtermApplication;
 import com.ironhack.midterm.controller.dto.Transference;
 import com.ironhack.midterm.exceptions.*;
@@ -10,6 +11,7 @@ import com.ironhack.midterm.repository.SavingsRepository;
 import com.ironhack.midterm.repository.StudentCheckingRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +39,10 @@ public class AccountService {
     private UserDetailsServiceImpl userService;
 
     private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
+
+    public String findByIdAndReturnString(User u, Integer id) {
+        return findById(u, id).toString() ;
+    }
 
     public Checking findById(User u, Integer id) {
         LOGGER.info("[INIT] - Find account with id: "+id);

@@ -43,4 +43,16 @@ public class StudentChecking extends Checking {
     public void setMinimumBalance(BigDecimal minimumBalance) {
         super.setMonthlyMaintenanceFee(minimumBalance);
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\n\tid: " + id +
+                ",\n\tbalance: " + balance.toString() +
+                ",\n\tsecretKey: " + secretKey +
+                ",\n\tprimaryOwner: " + primaryOwner.getName() +
+                ",\n\tpenaltyFee: " + penaltyFee +
+                ",\n\tstatus: " + status +
+                "\n}";
+    }
 }
