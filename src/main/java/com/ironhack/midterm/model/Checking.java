@@ -2,6 +2,7 @@ package com.ironhack.midterm.model;
 
 import com.ironhack.midterm.enums.AccountStatus;
 import com.ironhack.midterm.exceptions.AlreadyActiveException;
+import com.ironhack.midterm.exceptions.IllegalSecretKeyException;
 import com.ironhack.midterm.exceptions.NotEnoughBalanceException;
 import com.sun.istack.NotNull;
 
@@ -20,7 +21,7 @@ public class Checking {
     @NotNull
     protected Money balance;
     @NotNull
-    private Integer secretKey;
+    private String secretKey;
     @ManyToOne
     @NotNull
     private AccountHolder primaryOwner;
@@ -31,7 +32,7 @@ public class Checking {
     private BigDecimal monthlyMaintenanceFee;
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
     private List<Transaction> transactions;
 
     public Checking() {
@@ -39,7 +40,7 @@ public class Checking {
 
     public Checking(Money balance, Integer secretKey, AccountHolder primaryOwner) {
         this.balance = balance;
-        this.secretKey = secretKey;
+        setSecretKey(secretKey);
         this.primaryOwner = primaryOwner;
         this.secondaryOwner = null;
         this.minimumBalance = new BigDecimal(250);
@@ -75,12 +76,13 @@ public class Checking {
         return balance;
     }
 
-    public Integer getSecretKey() {
+    public String getSecretKey() {
         return secretKey;
     }
 
     public void setSecretKey(Integer secretKey) {
-        this.secretKey = secretKey;
+        if (secretKey<0 || secretKey>9999) throw new IllegalSecretKeyException();
+        this.secretKey = String.format("%04d", secretKey);
     }
 
     public void setSecondaryOwner(AccountHolder secondaryOwner) {

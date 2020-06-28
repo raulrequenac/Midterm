@@ -48,14 +48,14 @@ public class CreditCard extends Savings {
 
     @Override
     @Transient
-    public Integer getSecretKey() {
+    public String getSecretKey() {
         return super.getSecretKey();
     }
 
     @Override
     @Transient
     public void setSecretKey(Integer secretKey) {
-        super.setSecretKey(secretKey);
+
     }
 
     @Override

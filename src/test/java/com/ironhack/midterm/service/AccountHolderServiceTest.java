@@ -33,7 +33,7 @@ class AccountHolderServiceTest {
 
     @BeforeEach
     public void setUp() {
-        address = new Address();
+        address = new Address("Spain", "Malaga", 29005, "Larios", Short.valueOf("10"), Short.valueOf("4"), "D");
         addressRepository.save(address);
         accountHolder = new AccountHolder("a", "a", "a", LocalDate.now(), address);
         accountHolderService.create(accountHolder);

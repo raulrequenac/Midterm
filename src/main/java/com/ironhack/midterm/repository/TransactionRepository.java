@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Integer> {
-    @Query(value = "SELECT * FROM transaction ORDER BY id DESC LIMIT 1", nativeQuery = true)
-    Transaction findLastTransaction();
+    @Query(value = "SELECT * FROM transaction WHERE account_id=:id ORDER BY id DESC LIMIT 1", nativeQuery = true)
+    Transaction findLastTransaction(@Param("id") Integer id);
     @Query(value = "SELECT COUNT(*) FROM transaction WHERE account_id=:accountId AND user_id=:userId AND realized_at>=:startOfDay ORDER BY COUNT(*) DESC LIMIT 1", nativeQuery = true)
     Integer todayTotal(@Param("accountId") Integer accountId, @Param("userId") Integer userId, @Param("startOfDay") LocalDateTime startOfDay);
     @Query(value = "SELECT COUNT(*) FROM transaction WHERE account_id=:accountId AND user_id=:userId AND realized_at<:startOfDay GROUP BY realized_at ORDER BY COUNT(*) DESC LIMIT 1", nativeQuery = true)

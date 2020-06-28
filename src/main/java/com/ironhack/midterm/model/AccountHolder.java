@@ -17,9 +17,9 @@ public class AccountHolder extends User {
     private Address address;
     @ManyToOne
     private Address mailingAddress;
-    @OneToMany(mappedBy = "primaryOwner")
+    @OneToMany(mappedBy = "primaryOwner", cascade = CascadeType.ALL)
     private List<Checking> primaryAccounts;
-    @OneToMany(mappedBy = "secondaryOwner")
+    @OneToMany(mappedBy = "secondaryOwner", cascade = CascadeType.ALL)
     private List<Checking> secondaryAccounts;
 
     public AccountHolder() {
