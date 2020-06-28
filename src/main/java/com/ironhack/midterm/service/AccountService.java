@@ -69,7 +69,7 @@ public class AccountService {
     }
 
     public void credit(User user, Integer id, Money amount, String hashedKey) {
-        LOGGER.info("[INIT] - Credit account with id: "+id);
+        LOGGER.info("[INIT] - Credit account with id: "+id+" from User: "+user.getId());
         if (!user.isLoggedIn()) throw new NotLoggedInException();
         Checking account = findById(user, id);
         if (account.isFrozen()) throw new FrozenAccountException();
@@ -78,11 +78,11 @@ public class AccountService {
         account.credit(amount);
         saveAccount(account);
         transactionService.create(user, account);
-        LOGGER.info("[END] - Credit account with id: "+id);
+        LOGGER.info("[END] - Credit account with id: "+id+" from User: "+user.getId());
     }
 
     public void debit (User user, Integer id, Money amount, String hashedKey) {
-        LOGGER.info("[INIT] - Debit account with id: "+id);
+        LOGGER.info("[INIT] - Debit account with id: "+id+" from User: "+user.getId());
         if (!user.isLoggedIn()) throw new NotLoggedInException();
         Checking account = findById(user, id);
         if (account.isFrozen()) throw new FrozenAccountException();
@@ -91,7 +91,7 @@ public class AccountService {
         account.debit(amount);
         saveAccount(account);
         transactionService.create(user, account);
-        LOGGER.info("[END] - Debit account with id: "+id);
+        LOGGER.info("[END] - Debit account with id: "+id+" from User: "+user.getId());
     }
 
     @Transactional(dontRollbackOn = {FraudDetectedException.class})

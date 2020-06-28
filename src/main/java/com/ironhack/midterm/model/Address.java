@@ -1,15 +1,12 @@
 package com.ironhack.midterm.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
 public class Address {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String country;
     private String city;
@@ -18,9 +15,9 @@ public class Address {
     private Short portalNumber;
     private Short floor;
     private String door;
-    @OneToMany(mappedBy = "address")
+    @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
     private List<AccountHolder> users;
-    @OneToMany(mappedBy = "mailingAddress")
+    @OneToMany(mappedBy = "mailingAddress", cascade = CascadeType.ALL)
     private List<AccountHolder> mailingUsers;
 
     public Address() {

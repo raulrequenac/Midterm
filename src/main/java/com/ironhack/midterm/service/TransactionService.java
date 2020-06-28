@@ -24,8 +24,8 @@ public class TransactionService {
 
     private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
 
-    public Transaction findLastTransaction() {
-        return transactionRepository.findLastTransaction();
+    public Transaction findLastTransaction(Integer id) {
+        return transactionRepository.findLastTransaction(id);
     }
 
     public Transaction create(User user, Checking account) {
@@ -37,8 +37,8 @@ public class TransactionService {
 
     public void isFraud(User user, Checking account) {
         LOGGER.info("[INIT] - Is Account with id: "+account.getId()+" fraud");
-        Transaction lastTransaction = findLastTransaction();
-        Long secsBetween = lastTransaction==null ? 2 : Duration.between(lastTransaction.getRealizedAt(), LocalDateTime.now()).toSeconds();
+        Transaction lastTransaction = findLastTransaction(account.getId());
+        long secsBetween = lastTransaction==null ? 2 : Duration.between(lastTransaction.getRealizedAt(), LocalDateTime.now()).toSeconds();
         if (secsBetween<=1) freeze(account);
         LocalDateTime startOfDay = LocalDate.now().atStartOfDay();
         Integer today = transactionRepository.todayTotal(account.getId(), user.getId(), startOfDay);

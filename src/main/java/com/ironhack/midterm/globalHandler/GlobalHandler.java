@@ -59,6 +59,11 @@ public class GlobalHandler {
         response.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
     }
 
+    @ExceptionHandler(IllegalSecretKeyException.class)
+    public void handleIllegalSecretKeyException(IllegalSecretKeyException e, HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_BAD_REQUEST, e.getMessage());
+    }
+
     @ExceptionHandler(NameNotFoundException.class)
     public void handleNameNotFoundException(NameNotFoundException e, HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_NOT_FOUND, e.getMessage());

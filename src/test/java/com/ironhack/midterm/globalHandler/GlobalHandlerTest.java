@@ -83,6 +83,12 @@ class GlobalHandlerTest {
     }
 
     @Test
+    public void handleIllegalSecretKeyException() throws IOException {
+        globalHandler.handleIllegalSecretKeyException(new IllegalSecretKeyException(), response);
+        assertEquals(HttpStatus.BAD_REQUEST.value(), response.getStatus());
+    }
+
+    @Test
     public void handleNameNotFoundException() throws IOException {
         globalHandler.handleNameNotFoundException(new NameNotFoundException(), response);
         assertEquals(HttpStatus.NOT_FOUND.value(), response.getStatus());

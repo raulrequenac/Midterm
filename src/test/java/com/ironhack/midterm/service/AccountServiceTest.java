@@ -117,10 +117,8 @@ class AccountServiceTest {
     @Test
     public void unfreeze() {
         try {
-            for (int i = 0; i < 4; i++) {
-                System.out.println(i);
+            for (int i = 0; i < 4; i++)
                 accountService.credit(user, account.getId(), new Money(new BigDecimal(10)), null);
-            }
         } catch (FraudDetectedException e) {
             assertDoesNotThrow(() -> accountService.unfreeze(user, account.getId()));
         }
