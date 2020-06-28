@@ -51,18 +51,25 @@ The Money class is implemented and embedded in the Checking class for the accoun
 As said before, any access to a method will have the appropiated logs.
 
 ## Extras
+### Database
 For this proyect I have used H2 database. If you wish to access the data you can do so by following these instructions:
 1) Run proyect with mvn spring-boot:run
 2) Insert the following http://localhost:8080/h2-console into your browser
 3) There you can login by inserting:
 
     -JDBC URL: jdbc:h2:mem:midterm
-
     -user: root
-    
     -password: root
 
 The database is pre-instantiated to be ready for testing.
+
+### Postman Collection
+Get the Postman Collection in the following url: https://web.postman.co/collections/10126620-17a1cc20-fe8d-453c-bad7-49ee964e55ac/publish?version=latest&workspace=c08aa7ac-1575-48fe-8d16-539c891af347
+Don't forget to log in with any of the following users to access the api' methods:
+
+- username: admin,          password: admin
+- username: account-holder, password: account-holder
+- username: third-party,    password: third-party
 
 ## Conclusion
 This was a challenging project, mostly because the requirements were quite ambiguous and it took me time to decide how I wanted to resolve every one of the requirements.
