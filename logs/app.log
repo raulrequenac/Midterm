@@ -15470,3 +15470,1220 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No b
 2020-06-28 23:04:17,927 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find account with id: 2 and owner name: account-holder
 2020-06-28 23:04:17,930 WARN c.i.m.MidtermApplication [http-nio-8080-exec-9] [ERROR] - NotEnoughBalanceException
 2020-06-28 23:04:17,940 WARN o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [http-nio-8080-exec-9] Resolved [com.ironhack.midterm.exceptions.NotEnoughBalanceException: There's not enough balance in the account]
+2020-06-28 23:19:16,859 INFO c.i.m.MidtermApplication [restartedMain] Starting MidtermApplication on raul-hp with PID 68811 (/home/raul/Apps/Java-Enterprise-Bootcamp/midterm/target/classes started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:19:16,886 INFO c.i.m.MidtermApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-28 23:19:16,950 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-28 23:19:16,953 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-28 23:19:18,504 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@14d5ac72' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:19:18,517 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:19:18,887 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-06-28 23:19:18,991 INFO o.s.w.c.ContextLoader [restartedMain] Root WebApplicationContext: initialization completed in 2035 ms
+2020-06-28 23:19:19,179 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm'
+2020-06-28 23:19:19,316 INFO o.s.s.c.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:19:19,369 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:19:19,425 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:19:19,584 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:19:19,611 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:19:19,835 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:19:20,783 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:19:20,798 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:19:21,369 INFO o.s.b.d.a.OptionalLiveReloadServer [task-2] LiveReload server is running on port 35729
+2020-06-28 23:19:21,619 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fa001cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@60468741, org.springframework.security.web.header.HeaderWriterFilter@12f716d1, org.springframework.security.web.authentication.logout.LogoutFilter@2f2f8ad1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7628f181, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35ff9621, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@123be6f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20f0ad17, org.springframework.security.web.session.SessionManagementFilter@1c466a90, org.springframework.security.web.access.ExceptionTranslationFilter@4b937b33, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67f34a6f]
+2020-06-28 23:19:21,695 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-28 23:19:22,028 INFO c.i.m.MidtermApplication [restartedMain] Started MidtermApplication in 5.62 seconds (JVM running for 7.636)
+2020-06-28 23:19:58,052 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-4] Initializing Servlet 'dispatcherServlet'
+2020-06-28 23:19:58,070 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-4] Completed initialization in 14 ms
+2020-06-28 23:20:08,749 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Load User by username: account-holder
+2020-06-28 23:20:08,922 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Load User by username: account-holder
+2020-06-28 23:20:09,075 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Log in User: null
+2020-06-28 23:20:09,081 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Find User with id: 2
+2020-06-28 23:20:09,107 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find User with id: 2
+2020-06-28 23:20:09,146 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Log in User: null
+2020-06-28 23:20:13,249 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:13,255 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find User with id: 2
+2020-06-28 23:20:13,265 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find User with id: 2
+2020-06-28 23:20:13,270 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 1
+2020-06-28 23:20:13,274 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find User with id: 2
+2020-06-28 23:20:13,280 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find User with id: 2
+2020-06-28 23:20:13,284 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 1
+2020-06-28 23:20:13,297 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 1
+2020-06-28 23:20:13,301 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:13,313 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:13,316 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 1
+2020-06-28 23:20:13,320 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:13,323 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 2
+2020-06-28 23:20:13,328 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 2
+2020-06-28 23:20:13,332 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:13,336 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Save account with id: 1
+2020-06-28 23:20:13,342 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Save account with id: 1
+2020-06-28 23:20:13,346 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Save account with id: 2
+2020-06-28 23:20:13,355 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Save account with id: 2
+2020-06-28 23:20:13,360 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:15,551 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:15,554 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find User with id: 2
+2020-06-28 23:20:15,560 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find User with id: 2
+2020-06-28 23:20:15,564 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 1
+2020-06-28 23:20:15,568 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find User with id: 2
+2020-06-28 23:20:15,576 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find User with id: 2
+2020-06-28 23:20:15,581 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 1
+2020-06-28 23:20:15,587 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 1
+2020-06-28 23:20:15,593 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:15,599 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:15,603 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 1
+2020-06-28 23:20:15,608 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:15,612 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 2
+2020-06-28 23:20:15,620 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 2
+2020-06-28 23:20:15,625 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:15,628 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Save account with id: 1
+2020-06-28 23:20:15,631 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Save account with id: 1
+2020-06-28 23:20:15,634 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Save account with id: 2
+2020-06-28 23:20:15,639 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Save account with id: 2
+2020-06-28 23:20:15,643 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:16,591 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:16,594 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find User with id: 2
+2020-06-28 23:20:16,598 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find User with id: 2
+2020-06-28 23:20:16,602 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find account with id: 1
+2020-06-28 23:20:16,605 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find User with id: 2
+2020-06-28 23:20:16,610 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find User with id: 2
+2020-06-28 23:20:16,614 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find account with id: 1
+2020-06-28 23:20:16,620 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find account with id: 1
+2020-06-28 23:20:16,622 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:16,627 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:16,629 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find account with id: 1
+2020-06-28 23:20:16,631 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:16,633 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find account with id: 2
+2020-06-28 23:20:16,639 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find account with id: 2
+2020-06-28 23:20:16,641 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:16,646 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Save account with id: 1
+2020-06-28 23:20:16,649 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Save account with id: 1
+2020-06-28 23:20:16,654 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Save account with id: 2
+2020-06-28 23:20:16,657 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Save account with id: 2
+2020-06-28 23:20:16,660 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:18,779 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:18,781 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:20:18,788 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:20:18,792 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 1
+2020-06-28 23:20:18,794 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:20:18,797 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:20:18,799 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 1
+2020-06-28 23:20:18,806 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 1
+2020-06-28 23:20:18,809 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:18,815 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:18,818 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 1
+2020-06-28 23:20:18,824 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:18,827 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 2
+2020-06-28 23:20:18,831 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 2
+2020-06-28 23:20:18,833 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:18,837 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Save account with id: 1
+2020-06-28 23:20:18,843 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Save account with id: 1
+2020-06-28 23:20:18,846 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Save account with id: 2
+2020-06-28 23:20:18,850 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Save account with id: 2
+2020-06-28 23:20:18,853 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:19,896 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:20:19,898 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:20:19,904 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:20:19,907 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:20:19,913 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:20:19,916 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:20:19,919 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:20:19,923 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:20:19,926 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:19,931 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:20:19,934 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:20:19,940 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:19,943 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2
+2020-06-28 23:20:19,947 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2
+2020-06-28 23:20:19,949 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:20:19,953 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Save account with id: 1
+2020-06-28 23:20:19,956 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Save account with id: 1
+2020-06-28 23:20:19,959 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Save account with id: 2
+2020-06-28 23:20:19,962 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Save account with id: 2
+2020-06-28 23:20:19,965 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:23:25,912 INFO c.i.m.MidtermApplication [restartedMain] Starting MidtermApplication on raul-hp with PID 69575 (/home/raul/Apps/Java-Enterprise-Bootcamp/midterm/target/classes started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:23:26,009 INFO c.i.m.MidtermApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-28 23:23:26,149 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-28 23:23:26,158 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-28 23:23:29,488 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@617009f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:23:29,517 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:23:30,204 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-06-28 23:23:30,399 INFO o.s.w.c.ContextLoader [restartedMain] Root WebApplicationContext: initialization completed in 4230 ms
+2020-06-28 23:23:30,612 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm'
+2020-06-28 23:23:30,827 INFO o.s.s.c.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:23:30,894 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:23:30,913 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountControllerImpl': Unsatisfied dependency expressed through field 'accountService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountService': Unsatisfied dependency expressed through field 'transactionService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ironhack.midterm.service.TransactionService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-06-28 23:23:30,917 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:23:30,960 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:23:31,070 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:23:31,170 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:23:32,145 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:23:32,159 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:23:32,163 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [restartedMain] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-06-28 23:23:32,193 INFO o.s.s.c.ThreadPoolTaskExecutor [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:23:32,413 WARN o.s.b.f.s.DisposableBeanAdapter [restartedMain] Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-06-28 23:23:32,453 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-28 23:23:32,561 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field transactionService in com.ironhack.midterm.service.AccountService required a bean of type 'com.ironhack.midterm.service.TransactionService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.ironhack.midterm.service.TransactionService' in your configuration.
+
+2020-06-28 23:23:32,568 WARN o.s.b.SpringApplication [restartedMain] Unable to close ApplicationContext
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'applicationAvailability' defined in class path resource [org/springframework/boot/autoconfigure/availability/ApplicationAvailabilityAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:512) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at com.ironhack.midterm.MidtermApplication.main(MidtermApplication.java:10) [classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolvePreparedArguments(ConstructorResolver.java:835) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:151) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 23 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolvePreparedArguments(ConstructorResolver.java:835) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:151) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 23 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:814) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolvePreparedArguments(ConstructorResolver.java:835) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:151) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1193) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 23 more
+2020-06-28 23:23:48,870 INFO c.i.m.MidtermApplication [restartedMain] Starting MidtermApplication on raul-hp with PID 70032 (/home/raul/Apps/Java-Enterprise-Bootcamp/midterm/target/classes started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:23:48,896 INFO c.i.m.MidtermApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-28 23:23:48,995 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-28 23:23:49,009 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-28 23:23:50,854 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1415f48e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:23:50,867 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:23:51,170 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-06-28 23:23:51,258 INFO o.s.w.c.ContextLoader [restartedMain] Root WebApplicationContext: initialization completed in 2244 ms
+2020-06-28 23:23:51,453 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm'
+2020-06-28 23:23:51,610 INFO o.s.s.c.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:23:51,661 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:23:51,718 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:23:51,825 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:23:51,865 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:23:51,922 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:23:52,985 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:23:52,996 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:23:53,750 INFO o.s.b.d.a.OptionalLiveReloadServer [task-2] LiveReload server is running on port 35729
+2020-06-28 23:23:54,259 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f156178, org.springframework.security.web.context.SecurityContextPersistenceFilter@301fa72, org.springframework.security.web.header.HeaderWriterFilter@69a27854, org.springframework.security.web.authentication.logout.LogoutFilter@74c11d59, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@61f34927, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76f785b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@617a21e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73af4701, org.springframework.security.web.session.SessionManagementFilter@6aecee8e, org.springframework.security.web.access.ExceptionTranslationFilter@7717bd71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c185915]
+2020-06-28 23:23:54,367 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-28 23:23:54,857 INFO c.i.m.MidtermApplication [restartedMain] Started MidtermApplication in 6.461 seconds (JVM running for 8.374)
+2020-06-28 23:25:54,552 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-06-28 23:25:54,565 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 8 ms
+2020-06-28 23:25:54,703 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Load User by username: account-holder
+2020-06-28 23:25:54,887 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Load User by username: account-holder
+2020-06-28 23:25:55,129 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:25:55,131 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find User with id: 2
+2020-06-28 23:25:55,155 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find User with id: 2
+2020-06-28 23:25:55,158 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 1
+2020-06-28 23:25:55,161 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find User with id: 2
+2020-06-28 23:25:55,164 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find User with id: 2
+2020-06-28 23:25:55,169 WARN c.i.m.MidtermApplication [http-nio-8080-exec-2] [ERROR] - NotLoggedInException
+2020-06-28 23:25:55,177 WARN o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [com.ironhack.midterm.exceptions.NotLoggedInException: The user is not logged in]
+2020-06-28 23:25:59,215 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Log in User: null
+2020-06-28 23:25:59,224 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:25:59,281 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:25:59,343 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Log in User: null
+2020-06-28 23:26:02,398 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:02,401 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find User with id: 2
+2020-06-28 23:26:02,411 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find User with id: 2
+2020-06-28 23:26:02,414 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 1
+2020-06-28 23:26:02,420 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find User with id: 2
+2020-06-28 23:26:02,425 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find User with id: 2
+2020-06-28 23:26:02,429 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 1
+2020-06-28 23:26:02,442 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 1
+2020-06-28 23:26:02,446 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:02,471 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:02,474 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 1
+2020-06-28 23:26:02,477 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:02,480 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 2
+2020-06-28 23:26:02,490 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 2
+2020-06-28 23:26:02,494 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:02,497 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Save account with id: 1
+2020-06-28 23:26:02,508 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Save account with id: 1
+2020-06-28 23:26:02,511 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Save account with id: 2
+2020-06-28 23:26:02,523 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Save account with id: 2
+2020-06-28 23:26:02,527 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:03,554 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:03,560 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:26:03,573 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:26:03,581 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:26:03,587 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:26:03,594 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:26:03,601 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:26:03,609 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:26:03,615 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:03,624 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:03,630 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:26:03,638 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:03,643 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2
+2020-06-28 23:26:03,651 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2
+2020-06-28 23:26:03,659 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:03,663 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Save account with id: 1
+2020-06-28 23:26:03,669 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Save account with id: 1
+2020-06-28 23:26:03,673 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Save account with id: 2
+2020-06-28 23:26:03,679 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Save account with id: 2
+2020-06-28 23:26:03,683 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:04,658 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:04,661 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Find User with id: 2
+2020-06-28 23:26:04,669 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Find User with id: 2
+2020-06-28 23:26:04,672 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Find account with id: 1
+2020-06-28 23:26:04,677 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Find User with id: 2
+2020-06-28 23:26:04,681 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Find User with id: 2
+2020-06-28 23:26:04,684 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Find account with id: 1
+2020-06-28 23:26:04,690 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Find account with id: 1
+2020-06-28 23:26:04,694 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:04,699 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:04,702 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Find account with id: 1
+2020-06-28 23:26:04,704 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:04,707 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Find account with id: 2
+2020-06-28 23:26:04,712 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Find account with id: 2
+2020-06-28 23:26:04,715 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:04,718 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Save account with id: 1
+2020-06-28 23:26:04,721 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Save account with id: 1
+2020-06-28 23:26:04,723 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [INIT] - Save account with id: 2
+2020-06-28 23:26:04,726 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Save account with id: 2
+2020-06-28 23:26:04,728 INFO c.i.m.MidtermApplication [http-nio-8080-exec-6] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:05,721 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:05,723 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find User with id: 2
+2020-06-28 23:26:05,729 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find User with id: 2
+2020-06-28 23:26:05,731 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 1
+2020-06-28 23:26:05,734 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find User with id: 2
+2020-06-28 23:26:05,738 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find User with id: 2
+2020-06-28 23:26:05,740 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 1
+2020-06-28 23:26:05,748 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 1
+2020-06-28 23:26:05,752 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:05,757 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:05,762 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 1
+2020-06-28 23:26:05,766 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:05,769 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Find account with id: 2
+2020-06-28 23:26:05,775 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 2
+2020-06-28 23:26:05,778 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:05,780 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Save account with id: 1
+2020-06-28 23:26:05,785 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Save account with id: 1
+2020-06-28 23:26:05,787 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [INIT] - Save account with id: 2
+2020-06-28 23:26:05,791 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Save account with id: 2
+2020-06-28 23:26:05,794 INFO c.i.m.MidtermApplication [http-nio-8080-exec-7] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:06,579 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:06,584 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find User with id: 2
+2020-06-28 23:26:06,591 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find User with id: 2
+2020-06-28 23:26:06,594 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 1
+2020-06-28 23:26:06,597 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find User with id: 2
+2020-06-28 23:26:06,600 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find User with id: 2
+2020-06-28 23:26:06,602 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 1
+2020-06-28 23:26:06,607 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 1
+2020-06-28 23:26:06,612 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:06,618 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:06,623 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 1
+2020-06-28 23:26:06,627 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:06,629 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 2
+2020-06-28 23:26:06,634 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 2
+2020-06-28 23:26:06,641 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:06,644 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Save account with id: 1
+2020-06-28 23:26:06,647 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Save account with id: 1
+2020-06-28 23:26:06,652 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Save account with id: 2
+2020-06-28 23:26:06,659 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Save account with id: 2
+2020-06-28 23:26:06,663 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:08,284 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:26:08,288 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Find User with id: 2
+2020-06-28 23:26:08,294 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find User with id: 2
+2020-06-28 23:26:08,299 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Find account with id: 1
+2020-06-28 23:26:08,303 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Find User with id: 2
+2020-06-28 23:26:08,306 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find User with id: 2
+2020-06-28 23:26:08,310 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Find account with id: 1
+2020-06-28 23:26:08,315 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find account with id: 1
+2020-06-28 23:26:08,320 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:08,326 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:26:08,328 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find account with id: 1
+2020-06-28 23:26:08,330 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:08,333 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Find account with id: 2
+2020-06-28 23:26:08,338 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find account with id: 2
+2020-06-28 23:26:08,340 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:26:08,344 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Save account with id: 1
+2020-06-28 23:26:08,349 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Save account with id: 1
+2020-06-28 23:26:08,353 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [INIT] - Save account with id: 2
+2020-06-28 23:26:08,357 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Save account with id: 2
+2020-06-28 23:26:08,360 INFO c.i.m.MidtermApplication [http-nio-8080-exec-9] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:28:36,478 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:28:36,485 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find User with id: 2
+2020-06-28 23:28:36,494 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find User with id: 2
+2020-06-28 23:28:36,502 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 1
+2020-06-28 23:28:36,509 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find User with id: 2
+2020-06-28 23:28:36,514 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find User with id: 2
+2020-06-28 23:28:36,518 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 1
+2020-06-28 23:28:36,529 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 1
+2020-06-28 23:28:36,540 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:28:36,550 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:28:36,554 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 1
+2020-06-28 23:28:36,558 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:28:36,562 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Find account with id: 2
+2020-06-28 23:28:36,570 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 2
+2020-06-28 23:28:36,574 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:28:36,577 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Save account with id: 1
+2020-06-28 23:28:36,582 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Save account with id: 1
+2020-06-28 23:28:36,587 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [INIT] - Save account with id: 2
+2020-06-28 23:28:36,593 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Save account with id: 2
+2020-06-28 23:28:36,597 INFO c.i.m.MidtermApplication [http-nio-8080-exec-8] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:29:03,116 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:29:03,123 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:29:03,134 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:29:03,141 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:29:03,144 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:29:03,148 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:29:03,152 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:29:03,158 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:29:03,163 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:03,172 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:03,176 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:29:03,180 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:29:03,184 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2
+2020-06-28 23:29:03,193 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2
+2020-06-28 23:29:03,198 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:29:03,202 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Save account with id: 1
+2020-06-28 23:29:03,208 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Save account with id: 1
+2020-06-28 23:29:03,213 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Save account with id: 2
+2020-06-28 23:29:03,218 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Save account with id: 2
+2020-06-28 23:29:03,223 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:29:07,228 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [INIT] - Find account balance
+2020-06-28 23:29:07,233 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [INIT] - Find User with id: 2
+2020-06-28 23:29:07,241 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [END] - Find User with id: 2
+2020-06-28 23:29:07,247 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [INIT] - Find account with id: 1
+2020-06-28 23:29:07,251 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [INIT] - Find User with id: 2
+2020-06-28 23:29:07,259 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [END] - Find User with id: 2
+2020-06-28 23:29:07,263 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [INIT] - Find account with id: 1
+2020-06-28 23:29:07,273 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [END] - Find account with id: 1
+2020-06-28 23:29:07,276 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:07,282 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:07,287 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [END] - Find account with id: 1
+2020-06-28 23:29:07,291 INFO c.i.m.MidtermApplication [http-nio-8080-exec-10] [END] - Find account balance
+2020-06-28 23:29:11,084 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:29:11,086 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find User with id: 2
+2020-06-28 23:29:11,099 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find User with id: 2
+2020-06-28 23:29:11,104 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 1
+2020-06-28 23:29:11,113 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find User with id: 2
+2020-06-28 23:29:11,119 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find User with id: 2
+2020-06-28 23:29:11,124 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 1
+2020-06-28 23:29:11,139 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 1
+2020-06-28 23:29:11,144 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:11,153 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:11,158 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 1
+2020-06-28 23:29:11,161 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:29:11,166 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Find account with id: 2
+2020-06-28 23:29:11,174 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 2
+2020-06-28 23:29:11,177 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:29:11,181 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Save account with id: 1
+2020-06-28 23:29:11,185 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Save account with id: 1
+2020-06-28 23:29:11,189 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [INIT] - Save account with id: 2
+2020-06-28 23:29:11,196 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Save account with id: 2
+2020-06-28 23:29:11,199 INFO c.i.m.MidtermApplication [http-nio-8080-exec-2] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:29:13,079 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find account balance
+2020-06-28 23:29:13,085 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find User with id: 2
+2020-06-28 23:29:13,090 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find User with id: 2
+2020-06-28 23:29:13,095 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find account with id: 1
+2020-06-28 23:29:13,097 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find User with id: 2
+2020-06-28 23:29:13,103 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find User with id: 2
+2020-06-28 23:29:13,108 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find account with id: 1
+2020-06-28 23:29:13,134 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find account with id: 1
+2020-06-28 23:29:13,139 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:13,146 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:29:13,151 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find account with id: 1
+2020-06-28 23:29:13,155 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find account balance
+2020-06-28 23:33:19,912 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest], using SpringBootContextLoader
+2020-06-28 23:33:20,025 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:33:20,037 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest]: AccountControllerImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:33:20,605 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.controller.impl.AccountControllerImplTest
+2020-06-28 23:33:20,931 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:33:21,014 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@873718bc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@17464f48, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@878ac5d5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d353adb0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b7f912c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@c203f9cc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@44931c6a, org.springframework.test.context.event.EventPublishingTestExecutionListener@b08ad062, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@f61e1c1a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2f08a4c2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@b65a713, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@f278064a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6f55a95d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@bd33b486, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@68abc9cb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@d8ff3eae]
+2020-06-28 23:33:22,409 INFO c.i.m.c.i.AccountControllerImplTest [main] Starting AccountControllerImplTest on raul-hp with PID 71021 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:33:22,438 INFO c.i.m.c.i.AccountControllerImplTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:33:35,741 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@22d7cb88' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:33:35,785 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:33:36,562 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:33:37,391 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:33:37,643 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:33:37,973 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:33:38,025 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:33:38,643 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:33:42,062 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:33:42,109 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:33:46,965 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:33:49,186 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61a59591, org.springframework.security.web.context.SecurityContextPersistenceFilter@956480e4, org.springframework.security.web.header.HeaderWriterFilter@1a3383c, org.springframework.security.web.authentication.logout.LogoutFilter@9dc36175, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@44c7f9e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ca98c55a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@119f8fb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ea971813, org.springframework.security.web.session.SessionManagementFilter@d0e3c3a0, org.springframework.security.web.access.ExceptionTranslationFilter@2aa06fc7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@fd68f205]
+2020-06-28 23:33:52,980 INFO c.i.m.c.i.AccountControllerImplTest [main] Started AccountControllerImplTest in 31.825 seconds (JVM running for 48.046)
+2020-06-28 23:33:53,652 INFO o.s.b.t.m.w.SpringBootMockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-06-28 23:33:53,695 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2020-06-28 23:33:53,919 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 184 ms
+2020-06-28 23:34:27,947 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest], using SpringBootContextLoader
+2020-06-28 23:34:28,071 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:34:28,088 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest]: AccountControllerImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:34:28,383 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.controller.impl.AccountControllerImplTest
+2020-06-28 23:34:28,739 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:34:28,797 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@43f03c56, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@ccf0f0da, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5fefe4a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@af1ad857, org.springframework.test.context.support.DirtiesContextTestExecutionListener@76304cdd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c2534d9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@38bd50f9, org.springframework.test.context.event.EventPublishingTestExecutionListener@b06b8f4d, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5c8ab180, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@46dacec0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6769c4fa, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ed515edb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@fd58851e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7cd927ef, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@327b6a42, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@d4fa7ffc]
+2020-06-28 23:34:30,040 INFO c.i.m.c.i.AccountControllerImplTest [main] Starting AccountControllerImplTest on raul-hp with PID 71430 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:34:30,083 INFO c.i.m.c.i.AccountControllerImplTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:34:39,563 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b04b39c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:34:39,663 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:34:40,572 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:34:41,579 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:34:41,838 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:34:42,009 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:34:42,438 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:34:42,692 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:34:45,837 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:34:45,874 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:34:48,305 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:34:49,565 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f7b03398, org.springframework.security.web.context.SecurityContextPersistenceFilter@7abb3a93, org.springframework.security.web.header.HeaderWriterFilter@142f6b22, org.springframework.security.web.authentication.logout.LogoutFilter@7a7404e8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@796b7876, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c99f0ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f7e957a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c1a6e660, org.springframework.security.web.session.SessionManagementFilter@34c3e8ed, org.springframework.security.web.access.ExceptionTranslationFilter@1784cfb1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b10fa20d]
+2020-06-28 23:34:51,281 INFO c.i.m.c.i.AccountControllerImplTest [main] Started AccountControllerImplTest in 22.35 seconds (JVM running for 31.804)
+2020-06-28 23:34:51,463 INFO o.s.b.t.m.w.SpringBootMockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-06-28 23:34:51,474 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2020-06-28 23:34:51,582 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 99 ms
+2020-06-28 23:35:20,274 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest], using SpringBootContextLoader
+2020-06-28 23:35:20,350 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:35:20,357 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.controller.impl.AccountControllerImplTest]: AccountControllerImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:35:20,855 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.controller.impl.AccountControllerImplTest
+2020-06-28 23:35:21,288 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:35:21,369 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@dd8e2193, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f7bfc91d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@84982662, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@630c43a8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a0f1300a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f4bb2f18, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@9fde6f50, org.springframework.test.context.event.EventPublishingTestExecutionListener@33b25e5e, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@59486916, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@9f9e847a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4df51cbe, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@8d0871df, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ad9514c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@107d39df, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@c2a45b1c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@a9b980e6]
+2020-06-28 23:35:22,844 INFO c.i.m.c.i.AccountControllerImplTest [main] Starting AccountControllerImplTest on raul-hp with PID 71791 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:35:22,865 INFO c.i.m.c.i.AccountControllerImplTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:35:31,856 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@20943682' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:35:31,928 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:35:32,703 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:35:33,617 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:35:33,964 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:35:34,447 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:35:34,712 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:35:35,360 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:35:39,194 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:35:39,242 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:35:42,793 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:35:44,701 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b88ac7f3, org.springframework.security.web.context.SecurityContextPersistenceFilter@45c1c3e1, org.springframework.security.web.header.HeaderWriterFilter@196bd33f, org.springframework.security.web.authentication.logout.LogoutFilter@6ee68ad3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@f73b683b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@109ca7dd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70ad8eb1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@753c14e7, org.springframework.security.web.session.SessionManagementFilter@e1edad2c, org.springframework.security.web.access.ExceptionTranslationFilter@44112850, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@fedc3596]
+2020-06-28 23:35:47,920 INFO c.i.m.c.i.AccountControllerImplTest [main] Started AccountControllerImplTest in 26.401 seconds (JVM running for 36.445)
+2020-06-28 23:35:48,186 INFO o.s.b.t.m.w.SpringBootMockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-06-28 23:35:48,194 INFO o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2020-06-28 23:35:48,258 INFO o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 54 ms
+2020-06-28 23:36:39,643 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.service.AccountServiceTest], using SpringBootContextLoader
+2020-06-28 23:36:39,752 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.service.AccountServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:36:39,765 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.service.AccountServiceTest]: AccountServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:36:40,248 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.service.AccountServiceTest
+2020-06-28 23:36:40,631 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:36:40,688 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@9babc9c1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f1a706d9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f91bb205, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a5836174, org.springframework.test.context.support.DirtiesContextTestExecutionListener@860bebc2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5111a4dd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@f06ed077, org.springframework.test.context.event.EventPublishingTestExecutionListener@537b2258, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@b3a5753b, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@85aff9c6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@e2e34c65, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@a6ec269c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@67215222, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@239a544e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@14825481, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@e4e49db1]
+2020-06-28 23:36:42,319 INFO c.i.m.s.AccountServiceTest [main] Starting AccountServiceTest on raul-hp with PID 72165 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:36:42,508 INFO c.i.m.s.AccountServiceTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:36:52,041 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@77cda3db' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:36:52,101 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:36:52,870 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:36:53,804 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:36:54,137 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:36:54,824 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:36:55,052 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:36:55,326 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:36:59,040 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:36:59,069 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:37:03,080 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:37:04,685 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@84377737, org.springframework.security.web.context.SecurityContextPersistenceFilter@90417882, org.springframework.security.web.header.HeaderWriterFilter@8b67430b, org.springframework.security.web.authentication.logout.LogoutFilter@180bb401, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@d0cc4f48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c28afccf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@db6f7f25, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ebc26591, org.springframework.security.web.session.SessionManagementFilter@d66cf448, org.springframework.security.web.access.ExceptionTranslationFilter@384e160f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a831f9e]
+2020-06-28 23:37:07,536 INFO c.i.m.s.AccountServiceTest [main] Started AccountServiceTest in 26.73 seconds (JVM running for 42.717)
+2020-06-28 23:37:08,956 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:37:09,477 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:37:09,482 INFO c.i.m.MidtermApplication [main] [INIT] - Log in User: user
+2020-06-28 23:37:09,486 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:37:09,514 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:37:09,548 INFO c.i.m.MidtermApplication [main] [END] - Log in User: user
+2020-06-28 23:37:09,554 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:37:09,736 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:37:09,748 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:37:09,760 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:37:09,797 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:37:09,815 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 5
+2020-06-28 23:37:09,839 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 5
+2020-06-28 23:37:09,885 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:37:09,916 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:37:09,929 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:37:09,957 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:37:09,995 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:37:10,142 INFO c.i.m.MidtermApplication [main] [INIT] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:37:10,158 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:37:10,201 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:37:10,233 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:37:10,271 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:37:10,318 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:37:10,355 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:37:10,454 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:37:10,487 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:37:11,072 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:37:11,079 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:37:11,086 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6 and owner name: user
+2020-06-28 23:37:11,096 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:37:11,111 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:37:11,119 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6 and owner name: user
+2020-06-28 23:37:11,131 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 5
+2020-06-28 23:37:11,141 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 5
+2020-06-28 23:37:11,152 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 6
+2020-06-28 23:37:11,165 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 6
+2020-06-28 23:37:11,171 INFO c.i.m.MidtermApplication [main] [END] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:37:11,189 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:37:11,195 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:37:11,216 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:37:11,223 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:37:11,234 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:37:11,257 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:37:11,272 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:37:11,296 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:37:11,303 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 6
+2020-06-28 23:37:11,356 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 6
+2020-06-28 23:37:11,366 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:37:11,371 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:37:11,389 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:37:11,395 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:37:11,406 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:37:11,416 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:37:11,421 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:37:11,431 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:37:11,437 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:37:11,470 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:37:11,485 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:37:11,512 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:37:11,526 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:37:11,532 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:37:36,206 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.service.AccountServiceTest], using SpringBootContextLoader
+2020-06-28 23:37:36,321 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.service.AccountServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:37:36,335 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.service.AccountServiceTest]: AccountServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:37:36,859 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.service.AccountServiceTest
+2020-06-28 23:37:37,532 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:37:37,725 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e5059fef, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e2f730a3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@77745574, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@bfe03a36, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36d0ceb3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@a0832d0c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ea6265b0, org.springframework.test.context.event.EventPublishingTestExecutionListener@b30236b1, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@a1a973eb, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@84dcd63c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@e12694ed, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@938895ee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@24ff0239, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f354f99, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@cb49b99, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@8b632505]
+2020-06-28 23:37:39,597 INFO c.i.m.s.AccountServiceTest [main] Starting AccountServiceTest on raul-hp with PID 72539 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:37:39,613 INFO c.i.m.s.AccountServiceTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:37:50,174 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@c0c6348f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:37:50,218 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:37:50,802 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:37:51,417 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:37:51,948 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:37:52,401 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:37:52,770 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:37:53,459 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:37:59,852 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:37:59,916 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:38:08,626 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:38:10,398 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25a89aee, org.springframework.security.web.context.SecurityContextPersistenceFilter@b3ee116f, org.springframework.security.web.header.HeaderWriterFilter@7befa6eb, org.springframework.security.web.authentication.logout.LogoutFilter@38708242, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3c4d7447, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@251db87d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cd73bed8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8ec1feeb, org.springframework.security.web.session.SessionManagementFilter@a837bdba, org.springframework.security.web.access.ExceptionTranslationFilter@e33fab8e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1420006e]
+2020-06-28 23:38:14,132 INFO c.i.m.s.AccountServiceTest [main] Started AccountServiceTest in 36.138 seconds (JVM running for 47.547)
+2020-06-28 23:38:15,294 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:38:16,075 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:38:16,088 INFO c.i.m.MidtermApplication [main] [INIT] - Log in User: user
+2020-06-28 23:38:16,103 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:38:16,199 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:38:16,288 INFO c.i.m.MidtermApplication [main] [END] - Log in User: user
+2020-06-28 23:38:16,305 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:38:16,901 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:38:16,934 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:38:16,965 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:38:17,048 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:38:17,081 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 5
+2020-06-28 23:38:17,109 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 5
+2020-06-28 23:38:17,154 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:38:17,183 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:38:17,193 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:38:17,226 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:38:17,307 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:38:17,547 INFO c.i.m.MidtermApplication [main] [INIT] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:38:17,566 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:38:17,609 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:38:17,632 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:38:17,650 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:38:17,675 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:38:17,693 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:38:17,798 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:38:17,827 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:38:18,511 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:38:18,528 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:38:18,544 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6 and owner name: user
+2020-06-28 23:38:18,553 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:38:18,581 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:38:18,599 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6 and owner name: user
+2020-06-28 23:38:18,635 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 5
+2020-06-28 23:38:18,709 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 5
+2020-06-28 23:38:18,736 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 6
+2020-06-28 23:38:18,757 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 6
+2020-06-28 23:38:18,767 INFO c.i.m.MidtermApplication [main] [END] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:38:18,792 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:38:18,803 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:38:18,918 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:38:18,943 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:38:18,962 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:38:18,989 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:38:18,999 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:38:19,044 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:38:19,063 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 6
+2020-06-28 23:38:19,125 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 6
+2020-06-28 23:38:19,131 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:38:19,136 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:38:19,152 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:38:19,162 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:38:19,176 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:38:19,184 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:38:19,195 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:38:19,212 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:38:19,217 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:38:19,241 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:38:19,248 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:38:19,275 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:38:19,287 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:38:19,296 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:38:38,361 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.service.AccountServiceTest], using SpringBootContextLoader
+2020-06-28 23:38:38,703 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.service.AccountServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:38:38,732 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.service.AccountServiceTest]: AccountServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:38:39,363 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.service.AccountServiceTest
+2020-06-28 23:38:39,807 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:38:39,887 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ba3d7906, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@e1c849be, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8379e515, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@b91c5d3e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@f242fab9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@fc919e96, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a5bac5bb, org.springframework.test.context.event.EventPublishingTestExecutionListener@7027be5f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@9e66d80e, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@925b39b1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1da6c68, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@49c17db7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7dbb10a1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5890a687, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59723ded, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3649ad1b]
+2020-06-28 23:38:42,358 INFO c.i.m.s.AccountServiceTest [main] Starting AccountServiceTest on raul-hp with PID 72834 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:38:42,377 INFO c.i.m.s.AccountServiceTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:38:55,780 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2981bc03' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:38:55,834 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:38:56,741 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:38:57,328 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:38:57,620 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:38:58,055 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:38:58,511 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:38:59,373 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:39:05,303 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:39:05,348 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:39:10,903 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:39:12,517 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@96c965d0, org.springframework.security.web.context.SecurityContextPersistenceFilter@a6446605, org.springframework.security.web.header.HeaderWriterFilter@c9eb2f97, org.springframework.security.web.authentication.logout.LogoutFilter@32d4c94a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@252bc49e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@641351d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@814e6b4a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26041ca9, org.springframework.security.web.session.SessionManagementFilter@ed5fcfd, org.springframework.security.web.access.ExceptionTranslationFilter@f44df706, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a07b6a]
+2020-06-28 23:39:14,559 INFO c.i.m.s.AccountServiceTest [main] Started AccountServiceTest in 34.476 seconds (JVM running for 44.087)
+2020-06-28 23:39:15,843 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:39:16,916 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:39:16,923 INFO c.i.m.MidtermApplication [main] [INIT] - Log in User: user
+2020-06-28 23:39:16,929 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:39:16,961 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:39:17,012 INFO c.i.m.MidtermApplication [main] [END] - Log in User: user
+2020-06-28 23:39:17,022 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:39:17,356 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:39:17,370 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:39:17,383 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:39:17,420 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:39:17,430 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 5
+2020-06-28 23:39:17,448 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 5
+2020-06-28 23:39:17,517 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:39:17,558 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:39:17,568 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:39:17,593 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:39:17,621 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:39:17,710 INFO c.i.m.MidtermApplication [main] [INIT] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:39:17,716 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:39:17,732 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:39:17,740 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:39:17,746 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:39:17,752 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:39:17,759 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:39:17,791 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:39:17,798 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:39:18,135 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:39:18,142 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:39:18,149 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6 and owner name: user
+2020-06-28 23:39:18,157 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:39:18,173 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:39:18,178 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6 and owner name: user
+2020-06-28 23:39:18,184 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 5
+2020-06-28 23:39:18,194 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 5
+2020-06-28 23:39:18,200 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 6
+2020-06-28 23:39:18,210 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 6
+2020-06-28 23:39:18,217 INFO c.i.m.MidtermApplication [main] [END] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:39:18,232 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:39:18,238 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:39:18,249 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:39:18,257 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:39:18,265 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:39:18,277 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:39:18,283 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:39:18,297 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:39:18,303 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 6
+2020-06-28 23:39:18,364 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 6
+2020-06-28 23:39:18,373 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:39:18,379 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:39:18,393 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:39:18,398 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:39:18,410 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:39:18,415 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:39:18,422 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:39:18,431 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:39:18,436 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:39:18,455 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:39:18,462 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:39:18,476 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:39:18,481 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:39:18,490 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:39:40,056 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.service.AccountServiceTest], using SpringBootContextLoader
+2020-06-28 23:39:40,169 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.service.AccountServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:39:40,182 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.service.AccountServiceTest]: AccountServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:39:41,225 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.service.AccountServiceTest
+2020-06-28 23:39:42,149 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:39:42,303 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2c548c30, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@b352215e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2d5d1e7b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@cca638b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c852e62, org.springframework.test.context.transaction.TransactionalTestExecutionListener@134c22e1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@f0c0c3a, org.springframework.test.context.event.EventPublishingTestExecutionListener@dcc8a778, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5575000e, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@2a174f44, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@96a5de0c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6734c476, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@43f2479d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@b955b19, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@85e55cf1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@59ca39de]
+2020-06-28 23:39:43,981 INFO c.i.m.s.AccountServiceTest [main] Starting AccountServiceTest on raul-hp with PID 73254 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:39:44,005 INFO c.i.m.s.AccountServiceTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:39:50,722 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@fbbb2e2a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:39:50,795 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:39:54,425 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:39:56,240 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:39:56,636 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:39:57,075 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:39:57,165 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:39:57,766 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:40:00,901 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:40:00,949 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:40:04,357 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:40:05,881 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@96170b9e, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c09c319, org.springframework.security.web.header.HeaderWriterFilter@a7259381, org.springframework.security.web.authentication.logout.LogoutFilter@daf73313, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@10c18288, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51309402, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f3dfdcba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c25e4c52, org.springframework.security.web.session.SessionManagementFilter@ac409b11, org.springframework.security.web.access.ExceptionTranslationFilter@a41d9b25, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67be56a5]
+2020-06-28 23:40:09,062 INFO c.i.m.s.AccountServiceTest [main] Started AccountServiceTest in 26.597 seconds (JVM running for 37.97)
+2020-06-28 23:40:10,577 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:40:11,012 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:40:11,018 INFO c.i.m.MidtermApplication [main] [INIT] - Log in User: user
+2020-06-28 23:40:11,024 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:40:11,054 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:40:11,090 INFO c.i.m.MidtermApplication [main] [END] - Log in User: user
+2020-06-28 23:40:11,097 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:40:11,362 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:40:11,368 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:40:11,374 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:40:11,391 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:40:11,399 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 5
+2020-06-28 23:40:11,413 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 5
+2020-06-28 23:40:11,437 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:40:11,450 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:40:11,458 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:40:11,477 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:40:11,496 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:40:11,617 INFO c.i.m.MidtermApplication [main] [INIT] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:40:11,631 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:40:11,669 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:40:21,934 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:40:21,954 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:40:21,960 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:40:21,965 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:40:21,990 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:40:21,996 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:40:22,340 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:40:22,347 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:40:25,407 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6 and owner name: user
+2020-06-28 23:40:25,412 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:40:25,420 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:40:25,425 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6 and owner name: user
+2020-06-28 23:40:45,440 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 5
+2020-06-28 23:40:45,445 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 5
+2020-06-28 23:42:52,057 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 6
+2020-06-28 23:42:52,075 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 6
+2020-06-28 23:42:52,081 INFO c.i.m.MidtermApplication [main] [END] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:42:52,099 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:42:52,103 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:42:52,117 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:42:52,125 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:42:52,131 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:42:52,140 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:42:52,148 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:42:52,158 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:42:52,164 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 6
+2020-06-28 23:42:52,208 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 6
+2020-06-28 23:42:52,220 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:43:04,832 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ironhack.midterm.service.AccountServiceTest], using SpringBootContextLoader
+2020-06-28 23:43:04,928 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.ironhack.midterm.service.AccountServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-28 23:43:04,936 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.ironhack.midterm.service.AccountServiceTest]: AccountServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-06-28 23:43:05,345 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.ironhack.midterm.MidtermApplication for test class com.ironhack.midterm.service.AccountServiceTest
+2020-06-28 23:43:05,510 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2020-06-28 23:43:05,562 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6a95815b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@25601906, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8edde17, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@157fd29e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@59448d34, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ed8ad23, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@59563cc4, org.springframework.test.context.event.EventPublishingTestExecutionListener@c5db8a44, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@62a0093, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@9743fe68, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@c783ffba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@97459d51, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40269f00, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@973a6574, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2cd13f1f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5969a184]
+2020-06-28 23:43:07,022 INFO c.i.m.s.AccountServiceTest [main] Starting AccountServiceTest on raul-hp with PID 73606 (started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:43:07,060 INFO c.i.m.s.AccountServiceTest [main] No active profile set, falling back to default profiles: default
+2020-06-28 23:43:09,860 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1c9f932a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:43:09,881 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:43:10,592 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:43:11,001 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:43:11,188 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:43:11,438 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:43:11,921 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:43:12,927 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:43:16,474 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:43:16,487 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:43:18,158 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm_test'
+2020-06-28 23:43:18,695 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27e69562, org.springframework.security.web.context.SecurityContextPersistenceFilter@746c846a, org.springframework.security.web.header.HeaderWriterFilter@1e897e48, org.springframework.security.web.authentication.logout.LogoutFilter@2b64ea02, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6f3d068c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36196f3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75e226ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17355ec7, org.springframework.security.web.session.SessionManagementFilter@b9875788, org.springframework.security.web.access.ExceptionTranslationFilter@94a430a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51ae02ea]
+2020-06-28 23:43:19,428 INFO c.i.m.s.AccountServiceTest [main] Started AccountServiceTest in 13.774 seconds (JVM running for 17.846)
+2020-06-28 23:43:19,688 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:43:19,893 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:43:19,896 INFO c.i.m.MidtermApplication [main] [INIT] - Log in User: user
+2020-06-28 23:43:19,899 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:19,915 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:19,940 INFO c.i.m.MidtermApplication [main] [END] - Log in User: user
+2020-06-28 23:43:19,944 INFO c.i.m.MidtermApplication [main] [INIT] - Create AccountHolder User
+2020-06-28 23:43:20,086 INFO c.i.m.MidtermApplication [main] [END] - Create AccountHolder User
+2020-06-28 23:43:20,089 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:43:20,093 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:43:20,102 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:43:20,106 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 5
+2020-06-28 23:43:20,111 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 5
+2020-06-28 23:43:20,121 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:43:20,127 INFO c.i.m.MidtermApplication [main] [INIT] - Create Savings Account
+2020-06-28 23:43:20,130 INFO c.i.m.MidtermApplication [main] [INIT] - Find AccountHolder with id: 4
+2020-06-28 23:43:20,136 INFO c.i.m.MidtermApplication [main] [END] - Find AccountHolder with id: 4
+2020-06-28 23:43:20,144 INFO c.i.m.MidtermApplication [main] [END] - Create Savings Account
+2020-06-28 23:43:20,182 INFO c.i.m.MidtermApplication [main] [INIT] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:43:20,186 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,198 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,203 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:43:20,207 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,211 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,214 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:43:20,233 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:43:20,237 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:43:20,381 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:43:20,386 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:43:20,391 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6 and owner name: user
+2020-06-28 23:43:20,395 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:43:20,402 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:43:20,406 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6 and owner name: user
+2020-06-28 23:43:20,410 INFO c.i.m.MidtermApplication [main] [INIT] - Debit account with id: 5 from User: 4
+2020-06-28 23:43:20,413 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,416 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,420 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:43:20,423 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,426 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,429 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:43:20,432 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:43:20,435 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:43:20,439 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:43:20,441 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:43:20,444 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:43:20,447 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:43:20,451 INFO c.i.m.MidtermApplication [main] [INIT] - Is Account with id: 5 fraud
+2020-06-28 23:43:20,454 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,458 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,524 INFO c.i.m.MidtermApplication [main] [END] - Is Account with id: 5 fraud
+2020-06-28 23:43:20,527 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 5
+2020-06-28 23:43:20,532 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 5
+2020-06-28 23:43:20,535 INFO c.i.m.MidtermApplication [main] [INIT] - Create Transaction Account
+2020-06-28 23:43:20,543 INFO c.i.m.MidtermApplication [main] [END] - Create Transaction Account
+2020-06-28 23:43:20,547 INFO c.i.m.MidtermApplication [main] [END] - Debit account with id: 5 from User: 4
+2020-06-28 23:43:20,550 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 5
+2020-06-28 23:43:20,554 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 5
+2020-06-28 23:43:20,557 INFO c.i.m.MidtermApplication [main] [INIT] - Credit account with id: 6 from User: 4
+2020-06-28 23:43:20,559 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,562 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,564 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:43:20,566 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,571 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,575 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:43:20,579 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:43:20,581 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 6
+2020-06-28 23:43:20,587 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 6
+2020-06-28 23:43:20,590 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:43:20,592 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 6
+2020-06-28 23:43:20,599 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 6
+2020-06-28 23:43:20,603 INFO c.i.m.MidtermApplication [main] [INIT] - Is Account with id: 6 fraud
+2020-06-28 23:43:20,607 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,612 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,635 INFO c.i.m.MidtermApplication [main] [END] - Is Account with id: 6 fraud
+2020-06-28 23:43:20,639 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 6
+2020-06-28 23:43:20,645 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 6
+2020-06-28 23:43:20,649 INFO c.i.m.MidtermApplication [main] [INIT] - Create Transaction Account
+2020-06-28 23:43:20,654 INFO c.i.m.MidtermApplication [main] [END] - Create Transaction Account
+2020-06-28 23:43:20,661 INFO c.i.m.MidtermApplication [main] [END] - Credit account with id: 6 from User: 4
+2020-06-28 23:43:20,666 INFO c.i.m.MidtermApplication [main] [INIT] - Save account with id: 6
+2020-06-28 23:43:20,672 INFO c.i.m.MidtermApplication [main] [END] - Save account with id: 6
+2020-06-28 23:43:20,677 INFO c.i.m.MidtermApplication [main] [END] - Transfer from account with id: 5 to account with id: 6
+2020-06-28 23:43:20,688 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:43:20,693 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,708 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,714 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:43:20,719 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,731 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,735 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 6
+2020-06-28 23:43:20,757 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:43:20,761 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 6
+2020-06-28 23:43:20,791 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 6
+2020-06-28 23:43:20,793 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 6
+2020-06-28 23:43:20,795 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:43:20,802 INFO c.i.m.MidtermApplication [main] [INIT] - Find account balance
+2020-06-28 23:43:20,804 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,809 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,813 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:43:20,815 INFO c.i.m.MidtermApplication [main] [INIT] - Find User with id: 4
+2020-06-28 23:43:20,823 INFO c.i.m.MidtermApplication [main] [END] - Find User with id: 4
+2020-06-28 23:43:20,826 INFO c.i.m.MidtermApplication [main] [INIT] - Find account with id: 5
+2020-06-28 23:43:20,833 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:43:20,837 INFO c.i.m.MidtermApplication [main] [INIT] - Can user: user access account with id: 5
+2020-06-28 23:43:20,846 INFO c.i.m.MidtermApplication [main] [END] - Can user: user access account with id: 5
+2020-06-28 23:43:20,849 INFO c.i.m.MidtermApplication [main] [END] - Find account with id: 5
+2020-06-28 23:43:20,851 INFO c.i.m.MidtermApplication [main] [END] - Find account balance
+2020-06-28 23:43:20,990 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [SpringContextShutdownHook] HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-06-28 23:45:00,203 INFO c.i.m.MidtermApplication [restartedMain] Starting MidtermApplication on raul-hp with PID 74034 (/home/raul/Apps/Java-Enterprise-Bootcamp/midterm/target/classes started by raul in /home/raul/Apps/Java-Enterprise-Bootcamp/midterm)
+2020-06-28 23:45:00,229 INFO c.i.m.MidtermApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-28 23:45:00,274 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-28 23:45:00,278 INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-28 23:45:01,655 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1dfde2c8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:45:01,667 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 23:45:02,014 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-06-28 23:45:02,137 INFO o.s.w.c.ContextLoader [restartedMain] Root WebApplicationContext: initialization completed in 1855 ms
+2020-06-28 23:45:02,324 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:midterm'
+2020-06-28 23:45:02,485 INFO o.s.s.c.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 23:45:02,545 INFO o.h.j.i.u.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-28 23:45:02,590 INFO o.h.Version [task-1] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-28 23:45:02,687 INFO o.h.a.c.Version [task-1] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-28 23:45:02,766 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-28 23:45:02,786 INFO o.h.d.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-28 23:45:04,464 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-28 23:45:04,486 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-28 23:45:05,090 INFO o.s.b.d.a.OptionalLiveReloadServer [task-2] LiveReload server is running on port 35729
+2020-06-28 23:45:05,386 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1adfbd11, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f54fc61, org.springframework.security.web.header.HeaderWriterFilter@6fdfa9ae, org.springframework.security.web.authentication.logout.LogoutFilter@52d9af1f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@184e6cf4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c314616, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c5fcd1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51ab3b5e, org.springframework.security.web.session.SessionManagementFilter@10108d5e, org.springframework.security.web.access.ExceptionTranslationFilter@23b09f6e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c6c532b]
+2020-06-28 23:45:05,458 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-28 23:45:05,801 INFO c.i.m.MidtermApplication [restartedMain] Started MidtermApplication in 5.971 seconds (JVM running for 7.61)
+2020-06-28 23:45:21,065 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-28 23:45:21,077 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
+2020-06-28 23:45:21,259 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Load User by username: account-holder
+2020-06-28 23:45:21,425 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Load User by username: account-holder
+2020-06-28 23:45:21,592 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Log in User: null
+2020-06-28 23:45:21,595 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [INIT] - Find User with id: 2
+2020-06-28 23:45:21,625 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Find User with id: 2
+2020-06-28 23:45:21,659 INFO c.i.m.MidtermApplication [http-nio-8080-exec-1] [END] - Log in User: null
+2020-06-28 23:45:27,973 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:45:27,977 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:27,983 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:27,986 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 1
+2020-06-28 23:45:27,989 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:27,994 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:27,997 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 1
+2020-06-28 23:45:28,010 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 1
+2020-06-28 23:45:28,014 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:28,029 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:28,034 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 1
+2020-06-28 23:45:28,039 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:45:28,042 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 2
+2020-06-28 23:45:28,046 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 2
+2020-06-28 23:45:28,054 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:45:28,061 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Debit account with id: 1 from User: 2
+2020-06-28 23:45:28,068 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:28,080 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:28,085 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 1
+2020-06-28 23:45:28,090 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:28,093 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:28,095 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 1
+2020-06-28 23:45:28,100 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 1
+2020-06-28 23:45:28,103 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:28,110 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:28,112 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 1
+2020-06-28 23:45:28,115 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:28,121 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:28,127 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Is Account with id: 1 fraud
+2020-06-28 23:45:28,129 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:28,135 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:28,210 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Is Account with id: 1 fraud
+2020-06-28 23:45:28,212 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Save account with id: 1
+2020-06-28 23:45:28,218 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Save account with id: 1
+2020-06-28 23:45:28,226 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Create Transaction Account
+2020-06-28 23:45:28,239 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Create Transaction Account
+2020-06-28 23:45:28,242 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Debit account with id: 1 from User: 2
+2020-06-28 23:45:28,245 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Save account with id: 1
+2020-06-28 23:45:28,250 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Save account with id: 1
+2020-06-28 23:45:28,257 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Credit account with id: 2 from User: 2
+2020-06-28 23:45:28,260 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:28,262 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:28,267 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 2
+2020-06-28 23:45:28,273 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:28,277 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:28,279 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find account with id: 2
+2020-06-28 23:45:28,283 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 2
+2020-06-28 23:45:28,288 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Can user: account-holder access account with id: 2
+2020-06-28 23:45:28,303 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Can user: account-holder access account with id: 2
+2020-06-28 23:45:28,306 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find account with id: 2
+2020-06-28 23:45:28,307 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Can user: account-holder access account with id: 2
+2020-06-28 23:45:28,311 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Can user: account-holder access account with id: 2
+2020-06-28 23:45:28,313 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Is Account with id: 2 fraud
+2020-06-28 23:45:28,316 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Find User with id: 2
+2020-06-28 23:45:28,319 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Find User with id: 2
+2020-06-28 23:45:28,329 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Is Account with id: 2 fraud
+2020-06-28 23:45:28,332 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Save account with id: 2
+2020-06-28 23:45:28,341 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Save account with id: 2
+2020-06-28 23:45:28,344 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Create Transaction Account
+2020-06-28 23:45:28,348 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Create Transaction Account
+2020-06-28 23:45:28,351 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Credit account with id: 2 from User: 2
+2020-06-28 23:45:28,356 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [INIT] - Save account with id: 2
+2020-06-28 23:45:28,360 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Save account with id: 2
+2020-06-28 23:45:28,362 INFO c.i.m.MidtermApplication [http-nio-8080-exec-3] [END] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:45:29,337 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:45:29,344 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find User with id: 2
+2020-06-28 23:45:29,351 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find User with id: 2
+2020-06-28 23:45:29,353 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 1
+2020-06-28 23:45:29,356 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find User with id: 2
+2020-06-28 23:45:29,359 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find User with id: 2
+2020-06-28 23:45:29,361 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 1
+2020-06-28 23:45:29,370 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 1
+2020-06-28 23:45:29,373 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:29,378 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:29,381 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 1
+2020-06-28 23:45:29,384 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:45:29,386 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 2
+2020-06-28 23:45:29,392 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 2
+2020-06-28 23:45:29,395 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:45:29,401 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Debit account with id: 1 from User: 2
+2020-06-28 23:45:29,403 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find User with id: 2
+2020-06-28 23:45:29,406 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find User with id: 2
+2020-06-28 23:45:29,410 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 1
+2020-06-28 23:45:29,413 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find User with id: 2
+2020-06-28 23:45:29,416 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find User with id: 2
+2020-06-28 23:45:29,419 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find account with id: 1
+2020-06-28 23:45:29,425 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 1
+2020-06-28 23:45:29,428 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:29,434 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:29,437 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find account with id: 1
+2020-06-28 23:45:29,438 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:29,444 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:29,446 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Is Account with id: 1 fraud
+2020-06-28 23:45:29,450 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Find User with id: 2
+2020-06-28 23:45:29,454 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Find User with id: 2
+2020-06-28 23:45:29,461 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [INIT] - Save account with id: 1
+2020-06-28 23:45:29,463 INFO c.i.m.MidtermApplication [http-nio-8080-exec-4] [END] - Save account with id: 1
+2020-06-28 23:45:29,467 WARN c.i.m.MidtermApplication [http-nio-8080-exec-4] [ERROR] - FraudDetectedException
+2020-06-28 23:45:29,475 WARN o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [com.ironhack.midterm.exceptions.FraudDetectedException: A possible fraud was detected]
+2020-06-28 23:45:30,359 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Transfer from account with id: 1 to account with id: 2
+2020-06-28 23:45:30,366 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:45:30,375 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:45:30,380 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:45:30,384 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:45:30,391 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:45:30,394 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:45:30,401 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:45:30,404 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:30,415 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:30,419 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:45:30,423 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:45:30,429 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 2
+2020-06-28 23:45:30,434 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2
+2020-06-28 23:45:30,438 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 2 and owner name: account-holder
+2020-06-28 23:45:30,444 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Debit account with id: 1 from User: 2
+2020-06-28 23:45:30,446 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:45:30,451 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:45:30,456 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:45:30,458 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find User with id: 2
+2020-06-28 23:45:30,466 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find User with id: 2
+2020-06-28 23:45:30,468 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Find account with id: 1
+2020-06-28 23:45:30,471 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:45:30,474 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [INIT] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:30,481 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Can user: account-holder access account with id: 1
+2020-06-28 23:45:30,487 INFO c.i.m.MidtermApplication [http-nio-8080-exec-5] [END] - Find account with id: 1
+2020-06-28 23:45:30,491 WARN c.i.m.MidtermApplication [http-nio-8080-exec-5] [ERROR] - FrozenAccountException
+2020-06-28 23:45:30,499 WARN o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [http-nio-8080-exec-5] Resolved [com.ironhack.midterm.exceptions.FrozenAccountException: The account is frozen]
