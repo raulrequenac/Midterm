@@ -65,6 +65,7 @@ The database is pre-instantiated to be ready for testing.
 
 ### Postman Collection
 Get the Postman Collection in the following url: https://web.postman.co/collections/10126620-17a1cc20-fe8d-453c-bad7-49ee964e55ac/publish?version=latest&workspace=c08aa7ac-1575-48fe-8d16-539c891af347
+
 Don't forget to log in with any of the following users to access the api' methods:
 
 - username: admin,          password: admin
