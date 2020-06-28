@@ -57,9 +57,9 @@ For this proyect I have used H2 database. If you wish to access the data you can
 2) Insert the following http://localhost:8080/h2-console into your browser
 3) There you can login by inserting:
 
-    -JDBC URL: jdbc:h2:mem:midterm
-    -user: root
-    -password: root
+    - JDBC URL: jdbc:h2:mem:midterm
+    - user: root
+    - password: root
 
 The database is pre-instantiated to be ready for testing.
 
