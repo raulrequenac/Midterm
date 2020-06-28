@@ -2,17 +2,26 @@ package com.ironhack.midterm.controller.dto;
 
 import com.ironhack.midterm.model.Money;
 
+import java.math.BigDecimal;
+import java.util.Currency;
+
 public class CreditCardInstance {
-    private Money balance;
+    private BigDecimal amount;
+    private Currency currency;
     private Integer primaryOwnerId;
 
-    public CreditCardInstance(Money balance, Integer primaryOwnerId) {
-        this.balance = balance;
+    public CreditCardInstance(BigDecimal amount, Currency currency, Integer primaryOwnerId) {
+        this.amount = amount;
+        this.currency = currency;
         this.primaryOwnerId = primaryOwnerId;
     }
 
-    public Money getBalance() {
-        return balance;
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public Currency getCurrency() {
+        return currency;
     }
 
     public Integer getPrimaryOwnerId() {

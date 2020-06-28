@@ -1,5 +1,6 @@
 package com.ironhack.midterm.controller.impl;
 
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
 import com.ironhack.midterm.controller.interfaces.UserController;
 import com.ironhack.midterm.model.AccountHolder;
 import com.ironhack.midterm.model.Admin;
@@ -39,8 +40,8 @@ public class UserControllerImpl implements UserController {
 
     @PostMapping("/users/account-holders")
     @ResponseStatus(HttpStatus.CREATED)
-    public AccountHolder createAccountHolder(@RequestBody AccountHolder accountHolder) {
-        return accountHolderService.create(accountHolder);
+    public AccountHolder createAccountHolder(@RequestBody AccountHolderInstance accountHolderInstance) {
+        return accountHolderService.create(accountHolderInstance);
     }
 
     @PostMapping("/users/third-parties")

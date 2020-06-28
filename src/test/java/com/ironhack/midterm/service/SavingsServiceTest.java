@@ -1,5 +1,6 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
 import com.ironhack.midterm.controller.dto.AccountInstance;
 import com.ironhack.midterm.exceptions.IdNotFoundException;
 import com.ironhack.midterm.model.AccountHolder;
@@ -16,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Currency;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,6 +27,8 @@ class SavingsServiceTest {
     private SavingsService savingsService;
     @Autowired
     private SavingsRepository savingsRepository;
+    @Autowired
+    private AddressService addressService;
     @Autowired
     private AddressRepository addressRepository;
     @Autowired
@@ -46,11 +50,11 @@ class SavingsServiceTest {
     @Test
     public void create() {
         Address a = new Address();
-        addressRepository.save(a);
-        AccountHolder ah = new AccountHolder("a", "a", "a", LocalDate.now(), a);
-        accountHolderService.create(ah);
+        addressService.create(a);
+        AccountHolderInstance aI = new AccountHolderInstance("a", "a", "a", LocalDate.now(), a.getId());
+        AccountHolder ah = accountHolderService.create(aI);
         userService.login(ah);
-        AccountInstance ac = new AccountInstance(new Money(new BigDecimal(300)), ah.getId(), 1234);
+        AccountInstance ac = new AccountInstance(new BigDecimal(300), Currency.getInstance("USD"), ah.getId(), 1234);
         Savings s = savingsService.create(ac, null, null, null);
         assertDoesNotThrow(() -> accountService.findById(ah, s.getId()));
     }

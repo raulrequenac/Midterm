@@ -1,12 +1,11 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
 import com.ironhack.midterm.controller.dto.AccountInstance;
 import com.ironhack.midterm.exceptions.FraudDetectedException;
-import com.ironhack.midterm.model.AccountHolder;
-import com.ironhack.midterm.model.Checking;
-import com.ironhack.midterm.model.Money;
-import com.ironhack.midterm.model.Transaction;
+import com.ironhack.midterm.model.*;
 import com.ironhack.midterm.repository.AccountHolderRepository;
+import com.ironhack.midterm.repository.AddressRepository;
 import com.ironhack.midterm.repository.CheckingRepository;
 import com.ironhack.midterm.repository.TransactionRepository;
 import org.junit.jupiter.api.AfterEach;
@@ -17,6 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Currency;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,18 +36,23 @@ class TransactionServiceTest {
     private AccountHolderRepository accountHolderRepository;
     @Autowired
     private UserDetailsServiceImpl userService;
+    @Autowired
+    private AddressService addressService;
+    @Autowired
+    private AddressRepository addressRepository;
 
     private Checking account;
     private AccountHolder user;
 
     @BeforeEach
     public void setUp() {
-        user = new AccountHolder("a", "a", "a", LocalDate.now().minusYears(25), null);
-        AccountHolder s  = new AccountHolder("a", "a", "a", LocalDate.now().minusYears(25), null);
-        accountHolderService.create(user);
-        accountHolderService.create(s);
+        Address address = new Address();
+        addressService.create(address);
+        AccountHolderInstance aI = new AccountHolderInstance("a", "a", "a", LocalDate.now().minusYears(25), address.getId());
+        user = accountHolderService.create(aI);
+        AccountHolder s  = accountHolderService.create(aI);
         userService.login(user);
-        AccountInstance ac = new AccountInstance(new Money(new BigDecimal(200)), user.getId(), 1234);
+        AccountInstance ac = new AccountInstance(new BigDecimal(200), Currency.getInstance("USD"), user.getId(), 1234);
         account = checkingService.create(ac, s.getId());
     }
 
@@ -56,6 +61,7 @@ class TransactionServiceTest {
         transactionRepository.deleteAll();
         checkingRepository.deleteAll();
         accountHolderRepository.deleteAll();
+        addressRepository.deleteAll();
     }
 
     @Test

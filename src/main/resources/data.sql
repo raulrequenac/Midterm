@@ -17,4 +17,5 @@ INSERT INTO checking(amount, currency, minimum_balance, monthly_maintenance_fee,
     (300, 'USD', 250, 12, 40, '1234', 'ACTIVE', 2);
 INSERT INTO student_checking(id) VALUES (2);
 INSERT INTO savings(id, interest_rate, interest_date) VALUES (3, 0.5, NOW());
+INSERT INTO savings(id, interest_rate, interest_date) VALUES (4, 0.5, NOW());
 INSERT INTO credit_card(id, credit_limit) VALUES (4, 100000);

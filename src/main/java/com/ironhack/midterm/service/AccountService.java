@@ -33,11 +33,14 @@ public class AccountService {
     private CheckingService checkingService;
     @Autowired
     private TransactionService transactionService;
+    @Autowired
+    private UserDetailsServiceImpl userService;
 
     private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
 
-    public Checking findById(User user, Integer id) {
+    public Checking findById(User u, Integer id) {
         LOGGER.info("[INIT] - Find account with id: "+id);
+        User user = userService.findById(u.getId());
         if (!user.isLoggedIn()) throw new NotLoggedInException();
         Checking checking = findById(id);
         if (!canAccess(id, user)) throw new ForbiddenAccessException();
@@ -56,20 +59,23 @@ public class AccountService {
         LOGGER.info("[INIT] - Find account with id: "+id+" and owner name: "+ownerName);
         Checking account = findById(id);
         if (!account.getPrimaryOwner().getName().equals(ownerName) &&
-                !account.getSecondaryOwner().getName().equals(ownerName)) throw new NameNotFoundException();
+                (account.getSecondaryOwner() == null || !account.getSecondaryOwner().getName().equals(ownerName)))
+            throw new NameNotFoundException();
         LOGGER.info("[END] - Find account with id: "+id+" and owner name: "+ownerName);
         return account;
     }
 
-    public Money findBalance(User user, Integer id) {
+    public Money findBalance(User u, Integer id) {
         LOGGER.info("[INIT] - Find account balance");
+        User user = userService.findById(u.getId());
         Money balance = findById(user, id).getBalance();
         LOGGER.info("[END] - Find account balance");
         return balance;
     }
 
-    public void credit(User user, Integer id, Money amount, String hashedKey) {
-        LOGGER.info("[INIT] - Credit account with id: "+id+" from User: "+user.getId());
+    public void credit(User u, Integer id, Money amount, String hashedKey) {
+        LOGGER.info("[INIT] - Credit account with id: "+id+" from User: "+u.getId());
+        User user = userService.findById(u.getId());
         if (!user.isLoggedIn()) throw new NotLoggedInException();
         Checking account = findById(user, id);
         if (account.isFrozen()) throw new FrozenAccountException();
@@ -81,8 +87,9 @@ public class AccountService {
         LOGGER.info("[END] - Credit account with id: "+id+" from User: "+user.getId());
     }
 
-    public void debit (User user, Integer id, Money amount, String hashedKey) {
-        LOGGER.info("[INIT] - Debit account with id: "+id+" from User: "+user.getId());
+    public void debit (User u, Integer id, Money amount, String hashedKey) {
+        LOGGER.info("[INIT] - Debit account with id: "+id+" from User: "+u.getId());
+        User user = userService.findById(u.getId());
         if (!user.isLoggedIn()) throw new NotLoggedInException();
         Checking account = findById(user, id);
         if (account.isFrozen()) throw new FrozenAccountException();
@@ -95,8 +102,9 @@ public class AccountService {
     }
 
     @Transactional(dontRollbackOn = {FraudDetectedException.class})
-    public void transfer(User user, Integer accSenderId, Transference transference) {
+    public void transfer(User u, Integer accSenderId, Transference transference) {
         LOGGER.info("[INIT] - Transfer from account with id: "+accSenderId+" to account with id: "+transference.getReceiverId());
+        User user = userService.findById(u.getId());
         Checking accSender = findById(user, accSenderId);
         Checking accReceiver = findByIdAndOwnerName(transference.getOwnerName(), transference.getReceiverId());
 
@@ -108,9 +116,10 @@ public class AccountService {
         LOGGER.info("[END] - Transfer from account with id: "+accSenderId+" to account with id: "+transference.getReceiverId());
     }
 
-    public void unfreeze(User user, Integer id) {
+    public void unfreeze(User u, Integer id) {
         LOGGER.info("[INIT] - Unfreeze account with id: "+id);
-        Checking account = findById(user, id);
+        User user = userService.findById(u.getId());
+        Checking account = findById(id);
         account.unFreeze();
         saveAccount(account);
         LOGGER.info("[END] - Unfreeze account with id: "+id);
@@ -118,8 +127,7 @@ public class AccountService {
 
     public boolean canAccess(Integer accountId, User user) {
         LOGGER.info("[INIT] - Can user: "+user.getName()+" access account with id: "+accountId);
-        if (user.getRoles().contains("ADMIN")) return true;
-        boolean canAccess = checkingRepository.findByIdAndPrimaryOwner(accountId, user)!=null ||
+        boolean canAccess = user instanceof Admin || checkingRepository.findByIdAndPrimaryOwner(accountId, user)!=null ||
                 checkingRepository.findByIdAndSecondaryOwner(accountId, user)!=null;
         LOGGER.info("[END] - Can user: "+user.getName()+" access account with id: "+accountId);
         return canAccess;

@@ -48,23 +48,25 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     public User login(User user) {
         LOGGER.info("[INIT] - Log in User: "+user.getName());
-        user.logIn();
-        User u = saveUser(user);
+        User u = findById(user.getId());
+        u.logIn();
+        u = saveUser(u);
         LOGGER.info("[END] - Log in User: "+user.getName());
         return u;
     }
 
     public User logout(User user) {
         LOGGER.info("[INIT] - Log out User: "+user.getName());
-        user.logOut();
-        User u = saveUser(user);
+        User u = findById(user.getId());
+        u.logOut();
+        u = saveUser(u);
         LOGGER.info("[END] - Log out User: "+user.getName());
         return u;
     }
 
     public User saveUser(User user) {
-        if (user instanceof AccountHolder) return accountHolderRepository.save((AccountHolder)user);
-        if (user instanceof ThirdParty) return thirdPartyRepository.save((ThirdParty)user);
-        else return adminRepository.save((Admin) user);
+        if (user instanceof AccountHolder) return accountHolderRepository.save((AccountHolder) user);
+        if (user instanceof ThirdParty) return thirdPartyRepository.save((ThirdParty) user);
+        return adminRepository.save((Admin) user);
     }
 }

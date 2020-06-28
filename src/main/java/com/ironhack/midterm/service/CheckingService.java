@@ -29,19 +29,20 @@ public class CheckingService {
         AccountHolder secondaryOwner = null;
         if (secondaryOwnerId!=null)
             secondaryOwner = accountHolderService.findById(secondaryOwnerId);
+        Money balance = new Money(accountInstance.getAmount(), accountInstance.getCurrency());
 
         LocalDate today = LocalDate.now();
         if (today.minusYears(24).isBefore(primaryOwner.getDateOfBirth())) {
             LOGGER.info("[END] - Create Checking Account: Primary Owner is under 24yo");
             LOGGER.info("[INIT] - Create Student Checking Account");
-            StudentChecking studentChecking = new StudentChecking(accountInstance.getBalance(), accountInstance.getSecretKey(), primaryOwner);
+            StudentChecking studentChecking = new StudentChecking(balance, accountInstance.getSecretKey(), primaryOwner);
             if (secondaryOwner != null) studentChecking.setSecondaryOwner(secondaryOwner);
             StudentChecking st = studentCheckingRepository.save(studentChecking);
             LOGGER.info("[END] - Create Student Checking Account");
             return st;
         }
 
-        Checking checking = new Checking(accountInstance.getBalance(), accountInstance.getSecretKey(), primaryOwner);
+        Checking checking = new Checking(balance, accountInstance.getSecretKey(), primaryOwner);
         if (secondaryOwner != null) checking.setSecondaryOwner(secondaryOwner);
         Checking c = checkingRepository.save(checking);
         LOGGER.info("[END] - Create Checking Account");

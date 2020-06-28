@@ -21,6 +21,8 @@ public class TransactionService {
     private TransactionRepository transactionRepository;
     @Autowired
     private AccountService accountService;
+    @Autowired
+    private UserDetailsServiceImpl userService;
 
     private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
 
@@ -28,15 +30,17 @@ public class TransactionService {
         return transactionRepository.findLastTransaction(id);
     }
 
-    public Transaction create(User user, Checking account) {
+    public Transaction create(User u, Checking account) {
         LOGGER.info("[INIT] - Create Transaction Account");
+        User user = userService.findById(u.getId());
         Transaction t = transactionRepository.save(new Transaction(account, user));
         LOGGER.info("[END] - Create Transaction Account");
         return t;
     }
 
-    public void isFraud(User user, Checking account) {
+    public void isFraud(User u, Checking account) {
         LOGGER.info("[INIT] - Is Account with id: "+account.getId()+" fraud");
+        User user = userService.findById(u.getId());
         Transaction lastTransaction = findLastTransaction(account.getId());
         long secsBetween = lastTransaction==null ? 2 : Duration.between(lastTransaction.getRealizedAt(), LocalDateTime.now()).toSeconds();
         if (secsBetween<=1) freeze(account);

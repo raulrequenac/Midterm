@@ -1,8 +1,10 @@
 package com.ironhack.midterm.service;
 
 import com.ironhack.midterm.MidtermApplication;
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
 import com.ironhack.midterm.exceptions.IdNotFoundException;
 import com.ironhack.midterm.model.AccountHolder;
+import com.ironhack.midterm.model.Address;
 import com.ironhack.midterm.model.Role;
 import com.ironhack.midterm.repository.AccountHolderRepository;
 import com.ironhack.midterm.repository.RoleRepository;
@@ -18,6 +20,8 @@ public class AccountHolderService {
     private AccountHolderRepository accountHolderRepository;
     @Autowired
     private RoleRepository roleRepository;
+    @Autowired
+    private AddressService addressService;
 
     private static final Logger LOGGER = LogManager.getLogger(MidtermApplication.class);
 
@@ -28,8 +32,10 @@ public class AccountHolderService {
         return accountHolder;
     }
 
-    public AccountHolder create(AccountHolder accountHolder) {
+    public AccountHolder create(AccountHolderInstance accountHolderInstance) {
         LOGGER.info("[INIT] - Create AccountHolder User");
+        Address address = addressService.findById(accountHolderInstance.getAddressId());
+        AccountHolder accountHolder = new AccountHolder(accountHolderInstance.getName(), accountHolderInstance.getUsername(), accountHolderInstance.getPassword(), accountHolderInstance.getDateOfBirth(), address);
         accountHolder.setPassword(PasswordUtility.encryptPassword(accountHolder.getPassword()));
         roleRepository.save(new Role("ROLE_ACCOUNT_HOLDER", accountHolder));
         AccountHolder a = accountHolderRepository.save(accountHolder);

@@ -1,5 +1,7 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
+import com.ironhack.midterm.controller.dto.AccountInstance;
 import com.ironhack.midterm.exceptions.IdNotFoundException;
 import com.ironhack.midterm.exceptions.NameNotFoundException;
 import com.ironhack.midterm.model.AccountHolder;
@@ -24,6 +26,8 @@ class AccountHolderServiceTest {
     @Autowired
     private AccountHolderService accountHolderService;
     @Autowired
+    private AddressService addressService;
+    @Autowired
     private AddressRepository addressRepository;
     @Autowired
     private RoleRepository roleRepository;
@@ -34,9 +38,9 @@ class AccountHolderServiceTest {
     @BeforeEach
     public void setUp() {
         address = new Address("Spain", "Malaga", 29005, "Larios", Short.valueOf("10"), Short.valueOf("4"), "D");
-        addressRepository.save(address);
-        accountHolder = new AccountHolder("a", "a", "a", LocalDate.now(), address);
-        accountHolderService.create(accountHolder);
+        addressService.create(address);
+        AccountHolderInstance accountHolderInstance = new AccountHolderInstance("a", "a", "a", LocalDate.now(), address.getId());
+        accountHolder = accountHolderService.create(accountHolderInstance);
     }
 
     @AfterEach
@@ -57,8 +61,8 @@ class AccountHolderServiceTest {
 
     @Test
     public void create() {
-        AccountHolder a = new AccountHolder("b", "b", "b", LocalDate.now(), address);
-        accountHolderService.create(a);
+        AccountHolderInstance aI = new AccountHolderInstance("b", "b", "b", LocalDate.now(), address.getId());
+        AccountHolder a = accountHolderService.create(aI);
         assertEquals("b", accountHolderService.findById(a.getId()).getName());
     }
 }

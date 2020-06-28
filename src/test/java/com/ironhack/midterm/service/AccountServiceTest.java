@@ -1,10 +1,12 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
 import com.ironhack.midterm.controller.dto.AccountInstance;
 import com.ironhack.midterm.controller.dto.Transference;
 import com.ironhack.midterm.exceptions.AlreadyActiveException;
 import com.ironhack.midterm.exceptions.ForbiddenAccessException;
 import com.ironhack.midterm.exceptions.FraudDetectedException;
+import com.ironhack.midterm.exceptions.NameNotFoundException;
 import com.ironhack.midterm.model.*;
 import com.ironhack.midterm.repository.*;
 import org.junit.jupiter.api.AfterEach;
@@ -51,10 +53,12 @@ class AccountServiceTest {
     public void setUp() {
         address = new Address();
         addressRepository.save(address);
-        user = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
+        AccountHolderInstance accountHolderInstance = new AccountHolderInstance("user", "user", "user", LocalDate.of(1997, 10, 22), address.getId());
+        user = accountHolderService.create(accountHolderInstance);
         userService.login(user);
-        secondUser = accountHolderService.create(new AccountHolder("secondUser", "user", "user", LocalDate.of(1997, 10, 22), address));
-        account = savingsService.create(new AccountInstance(new Money(new BigDecimal(300)), user.getId(), 1234), null, null, secondUser.getId());
+        AccountHolderInstance accountHolderInstance2 = new AccountHolderInstance("secondUser", "user", "user", LocalDate.of(1997, 10, 22), address.getId());
+        secondUser = accountHolderService.create(accountHolderInstance);
+        account = savingsService.create(new AccountInstance(new BigDecimal(300), Currency.getInstance("USD"), user.getId(), 1234), null, null, secondUser.getId());
     }
 
     @AfterEach
@@ -76,6 +80,11 @@ class AccountServiceTest {
     }
 
     @Test
+    public void findByIdAndOwnerName_wrongName() {
+        assertThrows(NameNotFoundException.class, () -> accountService.findByIdAndOwnerName("ee", account.getId()));
+    }
+
+    @Test
     public void findBalance() {
         assertEquals(account.getBalance().getAmount(), accountService.findBalance(user, account.getId()).getAmount());
     }
@@ -88,7 +97,8 @@ class AccountServiceTest {
 
     @Test
     public void credit_cannotAccess() {
-        AccountHolder otherUser = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
+        AccountHolderInstance aI = new AccountHolderInstance("user", "user", "user", LocalDate.of(1997, 10, 22), address.getId());
+        AccountHolder otherUser = accountHolderService.create(aI);
         userService.login(otherUser);
         assertThrows(ForbiddenAccessException.class, () -> accountService.credit(otherUser, account.getId(), new Money(new BigDecimal(30)), null));
     }
@@ -101,14 +111,15 @@ class AccountServiceTest {
 
     @Test
     public void debit_cannotAccess() {
-        AccountHolder otherUser = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
+        AccountHolderInstance aI = new AccountHolderInstance("user", "user", "user", LocalDate.of(1997, 10, 22), address.getId());
+        AccountHolder otherUser = accountHolderService.create(aI);
         userService.login(otherUser);
         assertThrows(ForbiddenAccessException.class, () -> accountService.debit(otherUser, account.getId(), new Money(new BigDecimal(30)), null));
     }
 
     @Test
     public void transfer() {
-        Savings account2 = savingsService.create(new AccountInstance(new Money(new BigDecimal(300)), user.getId(), 1234), null, null, null);
+        Savings account2 = savingsService.create(new AccountInstance(new BigDecimal(300), Currency.getInstance("USD"), user.getId(), 1234), null, null, null);
         accountService.transfer(user, account.getId(), new Transference(account2.getId(), user.getName(), Currency.getInstance("USD"), new BigDecimal(100)));
         assertEquals(account2.getBalance().getAmount().add(new BigDecimal(100)), accountService.findBalance(user, account2.getId()).getAmount());
         assertEquals(account.getBalance().getAmount().subtract(new BigDecimal(100)), accountService.findBalance(user, account.getId()).getAmount());
@@ -131,7 +142,8 @@ class AccountServiceTest {
 
     @Test
     public void canAccess_false() {
-        AccountHolder user2 = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
-        assertFalse(accountService.canAccess(account.getId(), user2));
+        AccountHolderInstance aI = new AccountHolderInstance("user", "user", "user", LocalDate.of(1997, 10, 22), address.getId());
+        AccountHolder otherUser = accountHolderService.create(aI);
+        assertFalse(accountService.canAccess(account.getId(), otherUser));
     }
 }

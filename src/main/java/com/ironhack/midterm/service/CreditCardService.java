@@ -29,7 +29,8 @@ public class CreditCardService {
     public CreditCard create(CreditCardInstance creditCardInstance, BigDecimal interestRate, BigDecimal creditLimit, Integer secondaryOwnerId) {
         LOGGER.info("[INIT] - Create CreditCard Account");
         AccountHolder owner = accountHolderService.findById(creditCardInstance.getPrimaryOwnerId());
-        CreditCard creditCard = new CreditCard(creditCardInstance.getBalance(), owner);
+        Money balance = new Money(creditCardInstance.getAmount(), creditCardInstance.getCurrency());
+        CreditCard creditCard = new CreditCard(balance, owner);
         if (secondaryOwnerId!=null) creditCard.setSecondaryOwner(accountHolderService.findById(secondaryOwnerId));
         if (interestRate!=null) creditCard.setInterestRate(interestRate);
         if (creditLimit!=null) creditCard.setCreditLimit(creditLimit);

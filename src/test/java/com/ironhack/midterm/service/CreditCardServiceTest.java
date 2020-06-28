@@ -1,5 +1,6 @@
 package com.ironhack.midterm.service;
 
+import com.ironhack.midterm.controller.dto.AccountHolderInstance;
 import com.ironhack.midterm.controller.dto.CreditCardInstance;
 import com.ironhack.midterm.model.AccountHolder;
 import com.ironhack.midterm.model.Address;
@@ -15,6 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Currency;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,6 +26,8 @@ class CreditCardServiceTest {
     private CreditCardService creditCardService;
     @Autowired
     private CreditCardRepository creditCardRepository;
+    @Autowired
+    private AddressService addressService;
     @Autowired
     private AddressRepository addressRepository;
     @Autowired
@@ -45,10 +49,11 @@ class CreditCardServiceTest {
     @Test
     public void create() {
         Address address = new Address();
-        addressRepository.save(address);
-        AccountHolder user = accountHolderService.create(new AccountHolder("user", "user", "user", LocalDate.of(1997, 10, 22), address));
+        addressService.create(address);
+        AccountHolderInstance aI = new AccountHolderInstance("user", "user", "user", LocalDate.of(1997, 10, 22), address.getId());
+        AccountHolder user = accountHolderService.create(aI);
         userService.login(user);
-        CreditCard creditCard = creditCardService.create(new CreditCardInstance(new Money(new BigDecimal(300)), user.getId()), null, null, null);
+        CreditCard creditCard = creditCardService.create(new CreditCardInstance(new BigDecimal(300), Currency.getInstance("USD"), user.getId()), null, null, null);
         assertEquals(creditCard.getBalance().getAmount(), accountService.findById(user, creditCard.getId()).getBalance().getAmount());
     }
 }

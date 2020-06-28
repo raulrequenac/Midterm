@@ -29,7 +29,8 @@ public class SavingsService {
     public Savings create(AccountInstance accountInstance, BigDecimal interestRate, BigDecimal minimumBalance, Integer secondaryOwnerId) {
         LOGGER.info("[INIT] - Create Savings Account");
         AccountHolder owner = accountHolderService.findById(accountInstance.getPrimaryOwnerId());
-        Savings savings = new Savings(accountInstance.getBalance(), accountInstance.getSecretKey(), owner);
+        Money balance = new Money(accountInstance.getAmount(), accountInstance.getCurrency());
+        Savings savings = new Savings(balance, accountInstance.getSecretKey(), owner);
         if (secondaryOwnerId!=null) savings.setSecondaryOwner(accountHolderService.findById(secondaryOwnerId));
         if (interestRate!=null) savings.setInterestRate(interestRate);
         if (minimumBalance!=null) savings.setMinimumBalance(minimumBalance);
