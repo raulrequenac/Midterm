@@ -109,9 +109,9 @@ public class AccountService {
         Checking accReceiver = findByIdAndOwnerName(transference.getOwnerName(), transference.getReceiverId());
 
         Money amount = new Money(transference.getAmount(), transference.getCurrency());
-        accSender.debit(amount);
+        debit(user, accSenderId, amount, null);
         saveAccount(accSender);
-        accReceiver.credit(amount);
+        credit(user, accReceiver.getId(), amount, null);
         saveAccount(accReceiver);
         LOGGER.info("[END] - Transfer from account with id: "+accSenderId+" to account with id: "+transference.getReceiverId());
     }

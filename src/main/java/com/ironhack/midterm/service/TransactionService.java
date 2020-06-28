@@ -30,9 +30,8 @@ public class TransactionService {
         return transactionRepository.findLastTransaction(id);
     }
 
-    public Transaction create(User u, Checking account) {
+    public Transaction create(User user, Checking account) {
         LOGGER.info("[INIT] - Create Transaction Account");
-        User user = userService.findById(u.getId());
         Transaction t = transactionRepository.save(new Transaction(account, user));
         LOGGER.info("[END] - Create Transaction Account");
         return t;
